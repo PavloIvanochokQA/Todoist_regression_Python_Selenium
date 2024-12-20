@@ -6,13 +6,13 @@
       "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
       "children" : [ {
         "name" : "TC06: Successful email and username change.",
-        "uid" : "29978eac0437a5fd",
+        "uid" : "b4dfad5e68798b3b",
         "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
         "status" : "broken",
         "time" : {
-          "start" : 1734703836009,
-          "stop" : 1734703840471,
-          "duration" : 4462
+          "start" : 1734703846389,
+          "stop" : 1734703850237,
+          "duration" : 3848
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,28 +20,58 @@
       } ],
       "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
     }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: The task with name \"Either Republican under floor tonight check public among.\" was not found in the task list.",
+      "children" : [ {
+        "name" : "TC28: Successful duplication of a Task List.",
+        "uid" : "2f1d6a8d61d3afb4",
+        "parentUid" : "4e1cc030e99d45142800cc6338d71549",
+        "status" : "broken",
+        "time" : {
+          "start" : 1734703940186,
+          "stop" : 1734703940186,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4e1cc030e99d45142800cc6338d71549"
+    }, {
       "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
-        "name" : "TC25: Successful change of the Project name and type.",
-        "uid" : "e571e88bc45e015",
+        "name" : "TC30: Successful task moving on Board.",
+        "uid" : "841d525a54fbd0f1",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734703903922,
-          "stop" : 1734703927942,
-          "duration" : 24020
+          "start" : 1734703988259,
+          "stop" : 1734704002975,
+          "duration" : 14716
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC35: Successful filtering for a task by its due date.",
+        "uid" : "14ea72a57ee4cc88",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1734704053979,
+          "stop" : 1734704053979,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC12: Successful task creation.",
-        "uid" : "7244622b67832046",
+        "uid" : "4cebb7bf70bec46b",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704055380,
-          "stop" : 1734704055380,
+          "start" : 1734704069624,
+          "stop" : 1734704069624,
           "duration" : 0
         },
         "flaky" : false,
@@ -49,12 +79,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC13: Successful change of name, description, and priority for a task.",
-        "uid" : "731e90136e87b5b9",
+        "uid" : "19105e4e6d02f010",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704068003,
-          "stop" : 1734704068003,
+          "start" : 1734704082650,
+          "stop" : 1734704082650,
           "duration" : 0
         },
         "flaky" : false,
@@ -62,12 +92,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC14: Successful addition of a sub-task.",
-        "uid" : "d01eda62de11cffa",
+        "uid" : "6f045a38b1dc4c08",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704079814,
-          "stop" : 1734704079814,
+          "start" : 1734704095746,
+          "stop" : 1734704095746,
           "duration" : 0
         },
         "flaky" : false,
@@ -75,12 +105,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC15: Successful change of task due date and time.",
-        "uid" : "cc75e1b18c90aa7c",
+        "uid" : "175b24ea4314a005",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704091577,
-          "stop" : 1734704091577,
+          "start" : 1734704108778,
+          "stop" : 1734704108778,
           "duration" : 0
         },
         "flaky" : false,
@@ -88,12 +118,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC16: Successful task completion and marking as completed.",
-        "uid" : "9878d0b3b6964276",
+        "uid" : "39eb350e05a44154",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704103530,
-          "stop" : 1734704103530,
+          "start" : 1734704121670,
+          "stop" : 1734704121670,
           "duration" : 0
         },
         "flaky" : false,
@@ -101,12 +131,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC17: Successful task deletion.",
-        "uid" : "d458b8209c0a069c",
+        "uid" : "370c954689c9a695",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704115302,
-          "stop" : 1734704115302,
+          "start" : 1734704134591,
+          "stop" : 1734704134591,
           "duration" : 0
         },
         "flaky" : false,
@@ -114,12 +144,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC18: Successful task creation with a link.",
-        "uid" : "a99668cd2e2aaf87",
+        "uid" : "814ae48490fe026a",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704127943,
-          "stop" : 1734704127943,
+          "start" : 1734704147609,
+          "stop" : 1734704147609,
           "duration" : 0
         },
         "flaky" : false,
@@ -127,12 +157,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC19: Successful addition of a comment to a task.",
-        "uid" : "cb52fb744c9f9bb4",
+        "uid" : "d1d6ee8c281c19b4",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704139775,
-          "stop" : 1734704139775,
+          "start" : 1734704160582,
+          "stop" : 1734704160582,
           "duration" : 0
         },
         "flaky" : false,
@@ -140,12 +170,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC20: Successful addition of a label to a task.",
-        "uid" : "1c191c745a218c35",
+        "uid" : "d34d2bf9cba0b7c2",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704151620,
-          "stop" : 1734704151620,
+          "start" : 1734704173015,
+          "stop" : 1734704173015,
           "duration" : 0
         },
         "flaky" : false,
@@ -153,12 +183,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC21: Successful task duplication.",
-        "uid" : "d0bd8ad0354512fe",
+        "uid" : "26b20f7be8054915",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704164213,
-          "stop" : 1734704164213,
+          "start" : 1734704186217,
+          "stop" : 1734704186217,
           "duration" : 0
         },
         "flaky" : false,
@@ -166,12 +196,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC22: Unsuccessful task creation with invalid information.",
-        "uid" : "336e21264153d7ec",
+        "uid" : "4bd947f4f54581a4",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704175939,
-          "stop" : 1734704175939,
+          "start" : 1734704199482,
+          "stop" : 1734704199482,
           "duration" : 0
         },
         "flaky" : false,
@@ -179,12 +209,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC31: Successful search for a task by its name.",
-        "uid" : "1f6af9b765bff0ae",
+        "uid" : "c751f1308db6637a",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704187985,
-          "stop" : 1734704187985,
+          "start" : 1734704212494,
+          "stop" : 1734704212494,
           "duration" : 0
         },
         "flaky" : false,
@@ -192,12 +222,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC32: Successful search for a task by its description.",
-        "uid" : "d5fdd5ae43ba9827",
+        "uid" : "38c039845e3670b",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704199935,
-          "stop" : 1734704199935,
+          "start" : 1734704225590,
+          "stop" : 1734704225590,
           "duration" : 0
         },
         "flaky" : false,
@@ -205,12 +235,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC36: Successful search for a task that contains links.",
-        "uid" : "5a5aef86f91c7563",
+        "uid" : "ffbf4e0b8b3558a0",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704212059,
-          "stop" : 1734704212059,
+          "start" : 1734704238682,
+          "stop" : 1734704238682,
           "duration" : 0
         },
         "flaky" : false,
@@ -218,12 +248,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC37: Successful search for a task with a specific comment.",
-        "uid" : "129dcade967ade73",
+        "uid" : "8f1c65859a6290f3",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704223830,
-          "stop" : 1734704223830,
+          "start" : 1734704251787,
+          "stop" : 1734704251787,
           "duration" : 0
         },
         "flaky" : false,
@@ -231,12 +261,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC38: Successful search for a sub-task by its name.",
-        "uid" : "90442da510b74e2c",
+        "uid" : "ee024766f04d6a16",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704235699,
-          "stop" : 1734704235699,
+          "start" : 1734704264729,
+          "stop" : 1734704264729,
           "duration" : 0
         },
         "flaky" : false,
@@ -244,12 +274,12 @@
         "parameters" : [ ]
       }, {
         "name" : "TC39: Unsuccessful search for a task with non-existent information.",
-        "uid" : "a11d2b1458795a68",
+        "uid" : "bf03e1d2bfd1fabd",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1734704247842,
-          "stop" : 1734704247842,
+          "start" : 1734704277704,
+          "stop" : 1734704277704,
           "duration" : 0
         },
         "flaky" : false,

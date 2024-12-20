@@ -1,0 +1,129 @@
+{
+  "uid" : "9040ac89dfc57c0d",
+  "name" : "TC04: Ability to login using a Google account.",
+  "fullName" : "tests.test_authorization.TestAuthorization#test_authorization_using_google",
+  "historyId" : "87ac6bbe5851161becaf7b7f7200633a",
+  "time" : {
+    "start" : 1734703797661,
+    "stop" : 1734703797661,
+    "duration" : 0
+  },
+  "description" : "\n    This test verifies that a user can successfully login using a Google account, including the authorization process via Google's login page.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully login using a Google account, including the authorization process via Google's login page.\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "Skipped: The test is skipped because a CAPTCHA pass is sometimes required",
+  "statusTrace" : "('/usr/workspace/tests/test_authorization.py', 38, 'Skipped: The test is skipped because a CAPTCHA pass is sometimes required')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1734703782939,
+      "stop" : 1734703783008,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1734703797663,
+      "stop" : 1734703798024,
+      "duration" : 361
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1734703798024,
+      "stop" : 1734703798025,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1734703802296,
+      "stop" : 1734703802353,
+      "duration" : 57
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Authorization"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='The test is skipped because a CAPTCHA pass is sometimes required')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_authorization"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAuthorization"
+  }, {
+    "name" : "host",
+    "value" : "23048faf1ea9"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_authorization"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.skip(reason='The test is skipped because a CAPTCHA pass is sometimes required')" ]
+  },
+  "source" : "9040ac89dfc57c0d.json",
+  "parameterValues" : [ ]
+}
