@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Checkout (copy) gh-pages repository to GitHub runner
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: gh-pages
           path: ./.github/gh-pages
@@ -19,13 +19,17 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          USERNAME: ${{ secrets.USERNAME }}
+          GMAIL: ${{ secrets.GMAIL }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
         run: |
           docker compose build
           docker compose up --exit-code-from regression || true
 
       - name: Copy history from gh-pages to allure-results
         run: |
-          sudo mkdir -p allure-results/history  # Создает директорию для истории Allure
+          sudo mkdir -p allure-results/history
           sudo cp -R ./.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure report

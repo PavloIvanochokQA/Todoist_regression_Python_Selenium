@@ -1,4 +1,4 @@
-FROM python:3.12.0a4-alpine3.17
+FROM python:3.11-alpine3.17
 # update apk repo
 RUN echo "https://dl-4.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories && \
     echo "https://dl-4.alpinelinux.org/alpine/v3.10/community" >> /etc/apk/repositories
