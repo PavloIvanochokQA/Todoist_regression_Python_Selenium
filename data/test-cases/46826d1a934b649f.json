@@ -1,12 +1,12 @@
 {
-  "uid" : "29b6538a63fdbc5b",
+  "uid" : "46826d1a934b649f",
   "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
   "fullName" : "tests.test_registration.TestRegistration#test_unsuccessful_registration",
   "historyId" : "eb28b3b02a9a10fc7155c1874ff9c542",
   "time" : {
-    "start" : 1734700010299,
-    "stop" : 1734700012857,
-    "duration" : 2558
+    "start" : 1734700504593,
+    "stop" : 1734700507694,
+    "duration" : 3101
   },
   "description" : "\n    This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.\n    ",
   "descriptionHtml" : "<pre><code>This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.\n</code></pre>\n",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "setup",
     "time" : {
-      "start" : 1734700010298,
-      "stop" : 1734700010299,
+      "start" : 1734700504592,
+      "stop" : 1734700504593,
       "duration" : 1
     },
     "status" : "passed",
@@ -31,9 +31,9 @@
   }, {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1734699995386,
-      "stop" : 1734699995456,
-      "duration" : 70
+      "start" : 1734700488510,
+      "stop" : 1734700488575,
+      "duration" : 65
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,9 +46,9 @@
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1734700009909,
-      "stop" : 1734700010298,
-      "duration" : 389
+      "start" : 1734700504270,
+      "stop" : 1734700504592,
+      "duration" : 322
     },
     "status" : "passed",
     "steps" : [ ],
@@ -65,9 +65,9 @@
     "steps" : [ {
       "name" : "Open the page https://app.todoist.com/auth/signup.",
       "time" : {
-        "start" : 1734700010301,
-        "stop" : 1734700010870,
-        "duration" : 569
+        "start" : 1734700504595,
+        "stop" : 1734700505089,
+        "duration" : 494
       },
       "status" : "passed",
       "steps" : [ ],
@@ -80,9 +80,9 @@
     }, {
       "name" : "Verify that the page heading is \"Sign up\".",
       "time" : {
-        "start" : 1734700010870,
-        "stop" : 1734700011108,
-        "duration" : 238
+        "start" : 1734700505090,
+        "stop" : 1734700506120,
+        "duration" : 1030
       },
       "status" : "passed",
       "steps" : [ ],
@@ -95,9 +95,9 @@
     }, {
       "name" : "Enter email into the \"Email\" field.",
       "time" : {
-        "start" : 1734700011108,
-        "stop" : 1734700011306,
-        "duration" : 198
+        "start" : 1734700506120,
+        "stop" : 1734700506264,
+        "duration" : 144
       },
       "status" : "passed",
       "steps" : [ ],
@@ -113,16 +113,16 @@
     }, {
       "name" : "Enter password into the \"Password\" field.",
       "time" : {
-        "start" : 1734700011306,
-        "stop" : 1734700011436,
-        "duration" : 130
+        "start" : 1734700506264,
+        "stop" : 1734700506363,
+        "duration" : 99
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "password",
-        "value" : "'Gh%7Oz)r2@L1'"
+        "value" : "'3XXWo&0U*@v&'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -131,9 +131,9 @@
     }, {
       "name" : "Click on the \"Sign up with Email\" button.",
       "time" : {
-        "start" : 1734700011436,
-        "stop" : 1734700011530,
-        "duration" : 94
+        "start" : 1734700506363,
+        "stop" : 1734700506432,
+        "duration" : 69
       },
       "status" : "passed",
       "steps" : [ ],
@@ -146,9 +146,9 @@
     }, {
       "name" : "Verify that the page displays an error message.",
       "time" : {
-        "start" : 1734700011530,
-        "stop" : 1734700012552,
-        "duration" : 1022
+        "start" : 1734700506432,
+        "stop" : 1734700507452,
+        "duration" : 1020
       },
       "status" : "passed",
       "steps" : [ ],
@@ -161,9 +161,9 @@
     }, {
       "name" : "Verify that the page heading is \"Sign up\".",
       "time" : {
-        "start" : 1734700012552,
-        "stop" : 1734700012567,
-        "duration" : 15
+        "start" : 1734700507452,
+        "stop" : 1734700507464,
+        "duration" : 12
       },
       "status" : "passed",
       "steps" : [ ],
@@ -176,16 +176,16 @@
     }, {
       "name" : "Enter email into the \"Email\" field.",
       "time" : {
-        "start" : 1734700012568,
-        "stop" : 1734700012683,
-        "duration" : 115
+        "start" : 1734700507464,
+        "stop" : 1734700507571,
+        "duration" : 107
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "email",
-        "value" : "'sarah02@example.org'"
+        "value" : "'gnichols@example.org'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -194,16 +194,16 @@
     }, {
       "name" : "Enter password into the \"Password\" field.",
       "time" : {
-        "start" : 1734700012683,
-        "stop" : 1734700012755,
-        "duration" : 72
+        "start" : 1734700507571,
+        "stop" : 1734700507630,
+        "duration" : 59
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "password",
-        "value" : "'9254515'"
+        "value" : "'9702939'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -212,9 +212,9 @@
     }, {
       "name" : "Click on the \"Sign up with Email\" button.",
       "time" : {
-        "start" : 1734700012755,
-        "stop" : 1734700012808,
-        "duration" : 53
+        "start" : 1734700507630,
+        "stop" : 1734700507672,
+        "duration" : 42
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,9 +227,9 @@
     }, {
       "name" : "Verify that the page heading is \"Sign up\".",
       "time" : {
-        "start" : 1734700012808,
-        "stop" : 1734700012857,
-        "duration" : 49
+        "start" : 1734700507672,
+        "stop" : 1734700507694,
+        "duration" : 22
       },
       "status" : "passed",
       "steps" : [ ],
@@ -250,9 +250,9 @@
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1734700012858,
-      "stop" : 1734700012918,
-      "duration" : 60
+      "start" : 1734700507695,
+      "stop" : 1734700507752,
+      "duration" : 57
     },
     "status" : "passed",
     "steps" : [ ],
@@ -264,11 +264,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Registration"
-  }, {
     "name" : "severity",
     "value" : "minor"
+  }, {
+    "name" : "feature",
+    "value" : "Registration"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -280,7 +280,7 @@
     "value" : "TestRegistration"
   }, {
     "name" : "host",
-    "value" : "98691f06246e"
+    "value" : "1a1bce58ecf7"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -305,8 +305,27 @@
     "severity" : "minor",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "29b6538a63fdbc5b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734700010299,
+          "stop" : 1734700012857,
+          "duration" : 2558
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "29b6538a63fdbc5b.json",
+  "source" : "46826d1a934b649f.json",
   "parameterValues" : [ ]
 }
