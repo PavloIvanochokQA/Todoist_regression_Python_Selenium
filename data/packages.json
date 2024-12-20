@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests.test_registration",
+    "children" : [ {
+      "name" : "TC01: Successful registration of a new account with valid information.",
+      "uid" : "f7f1390b84361e61",
+      "parentUid" : "6f5fba3c566fec8d2e4ca261b64f1ed1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734699995863,
+        "stop" : 1734700009804,
+        "duration" : 13941
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+      "uid" : "29b6538a63fdbc5b",
+      "parentUid" : "6f5fba3c566fec8d2e4ca261b64f1ed1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734700010299,
+        "stop" : 1734700012857,
+        "duration" : 2558
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.test_registration"
+  } ],
+  "name" : "packages"
+}

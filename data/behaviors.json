@@ -1,0 +1,35 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Registration",
+    "children" : [ {
+      "name" : "TC01: Successful registration of a new account with valid information.",
+      "uid" : "f7f1390b84361e61",
+      "parentUid" : "c0effe69527f658c5af968b745a6e0ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734699995863,
+        "stop" : 1734700009804,
+        "duration" : 13941
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+      "uid" : "29b6538a63fdbc5b",
+      "parentUid" : "c0effe69527f658c5af968b745a6e0ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734700010299,
+        "stop" : 1734700012857,
+        "duration" : 2558
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c0effe69527f658c5af968b745a6e0ad"
+  } ],
+  "name" : "behaviors"
+}

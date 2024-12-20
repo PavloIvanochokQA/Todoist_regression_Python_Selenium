@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "test_registration",
+      "children" : [ {
+        "name" : "TestRegistration",
+        "children" : [ {
+          "name" : "TC01: Successful registration of a new account with valid information.",
+          "uid" : "f7f1390b84361e61",
+          "parentUid" : "b68d2a345d8cf81f88c2c5d2f6385b38",
+          "status" : "passed",
+          "time" : {
+            "start" : 1734699995863,
+            "stop" : 1734700009804,
+            "duration" : 13941
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+          "uid" : "29b6538a63fdbc5b",
+          "parentUid" : "b68d2a345d8cf81f88c2c5d2f6385b38",
+          "status" : "passed",
+          "time" : {
+            "start" : 1734700010299,
+            "stop" : 1734700012857,
+            "duration" : 2558
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "b68d2a345d8cf81f88c2c5d2f6385b38"
+      } ],
+      "uid" : "8d9327f354a9d267e277f39b71d532b5"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ],
+  "name" : "suites"
+}

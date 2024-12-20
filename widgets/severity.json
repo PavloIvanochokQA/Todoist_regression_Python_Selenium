@@ -1,0 +1,21 @@
+[ {
+  "uid" : "f7f1390b84361e61",
+  "name" : "TC01: Successful registration of a new account with valid information.",
+  "time" : {
+    "start" : 1734699995863,
+    "stop" : 1734700009804,
+    "duration" : 13941
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "29b6538a63fdbc5b",
+  "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+  "time" : {
+    "start" : 1734700010299,
+    "stop" : 1734700012857,
+    "duration" : 2558
+  },
+  "status" : "passed",
+  "severity" : "minor"
+} ]
