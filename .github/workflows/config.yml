@@ -1,15 +1,13 @@
 name: UI Tests
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   ui-tests:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout main repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Checkout (copy) gh-pages repository to GitHub runner
         uses: actions/checkout@v2
@@ -21,35 +19,22 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          USERNAME: ${{ secrets.USERNAME }}
-          GMAIL: ${{ secrets.GMAIL }}
-          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
         run: |
           docker compose build
           docker compose up --exit-code-from regression || true
 
       - name: Copy history from gh-pages to allure-results
         run: |
-          sudo mkdir -p allure-results/history  # Створює директорію для історії Allure
-          if [ -d "./.github/gh-pages/history/" ]; then
-            sudo cp -R ./.github/gh-pages/history/* allure-results/history/
-          else
-            echo "History directory not found, skipping copy."
-          fi
+          sudo mkdir -p allure-results/history  # Создает директорию для истории Allure
+          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure report
         run: |
-          sudo docker compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
 
       - name: Update Allure history
         run: |
-          if [ -d "allure-report/history/" ]; then
-            sudo mkdir -p ./.github/gh-pages/history/
-            sudo cp -R allure-report/history/* ./.github/gh-pages/history/
-          else
-            echo "No history directory in allure-report, skipping update."
-          fi
+          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
