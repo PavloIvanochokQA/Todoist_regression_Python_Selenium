@@ -1,7 +1,7 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Dec 20 13:18:22 GMT 2024","Fri Dec 20 13:18:24 GMT 2024","2270","tests","test_registration","TestRegistration","","","TC08: Unsuccessful registration of a new account with invalid information.","
-    This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.
-    "
-"passed","Fri Dec 20 13:18:08 GMT 2024","Fri Dec 20 13:18:22 GMT 2024","13479","tests","test_registration","TestRegistration","","","TC01: Successful registration of a new account with valid information.","
+"passed","Fri Dec 20 13:18:08 GMT 2024","Fri Dec 20 13:18:22 GMT 2024","13874","tests","test_registration","TestRegistration","","","TC01: Successful registration of a new account with valid information.","
     This test verifies that a new account can be successfully registered using valid email, password, and username information.
+    "
+"passed","Fri Dec 20 13:18:22 GMT 2024","Fri Dec 20 13:18:26 GMT 2024","3320","tests","test_registration","TestRegistration","","","TC08: Unsuccessful registration of a new account with invalid information.","
+    This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.
     "
