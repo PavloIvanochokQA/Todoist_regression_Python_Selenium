@@ -1,20 +1,20 @@
 [ {
-  "uid" : "b55eef5281487c78",
+  "uid" : "f406b4aef8415725",
   "name" : "TC01: Successful registration of a new account with valid information.",
   "time" : {
-    "start" : 1734701723073,
-    "stop" : 1734701736036,
-    "duration" : 12963
+    "start" : 1734701730398,
+    "stop" : 1734701746262,
+    "duration" : 15864
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "510de3928f76923a",
+  "uid" : "e5de1ba2f16873e6",
   "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
   "time" : {
-    "start" : 1734701736472,
-    "stop" : 1734701739566,
-    "duration" : 3094
+    "start" : 1734701746724,
+    "stop" : 1734701749129,
+    "duration" : 2405
   },
   "status" : "passed",
   "severity" : "minor"

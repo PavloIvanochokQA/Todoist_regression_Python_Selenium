@@ -4,26 +4,26 @@
     "name" : "tests.test_registration",
     "children" : [ {
       "name" : "TC01: Successful registration of a new account with valid information.",
-      "uid" : "b55eef5281487c78",
+      "uid" : "f406b4aef8415725",
       "parentUid" : "6f5fba3c566fec8d2e4ca261b64f1ed1",
       "status" : "passed",
       "time" : {
-        "start" : 1734701723073,
-        "stop" : 1734701736036,
-        "duration" : 12963
+        "start" : 1734701730398,
+        "stop" : 1734701746262,
+        "duration" : 15864
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
-      "uid" : "510de3928f76923a",
+      "uid" : "e5de1ba2f16873e6",
       "parentUid" : "6f5fba3c566fec8d2e4ca261b64f1ed1",
       "status" : "passed",
       "time" : {
-        "start" : 1734701736472,
-        "stop" : 1734701739566,
-        "duration" : 3094
+        "start" : 1734701746724,
+        "stop" : 1734701749129,
+        "duration" : 2405
       },
       "flaky" : false,
       "newFailed" : false,
