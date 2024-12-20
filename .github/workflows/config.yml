@@ -34,7 +34,8 @@ jobs:
             sudo cp -R ./.github/gh-pages/history/* allure-results/history/
           else
             echo "History directory not found, skipping copy."
-
+            fi
+            
       - name: Generate Allure report
         run: |
           sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
