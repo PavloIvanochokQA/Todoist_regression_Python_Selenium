@@ -1,12 +1,12 @@
 {
-  "uid" : "e4a9154e6d9161fa",
+  "uid" : "2ef8883b55b3602f",
   "name" : "TC01: Successful registration of a new account with valid information.",
   "fullName" : "tests.test_registration.TestRegistration#test_registration",
   "historyId" : "a52a484530a8a2868f0494951d73f0e2",
   "time" : {
-    "start" : 1734700688506,
-    "stop" : 1734700702380,
-    "duration" : 13874
+    "start" : 1734700830893,
+    "stop" : 1734700844565,
+    "duration" : 13672
   },
   "description" : "\n    This test verifies that a new account can be successfully registered using valid email, password, and username information.\n    ",
   "descriptionHtml" : "<pre><code>This test verifies that a new account can be successfully registered using valid email, password, and username information.\n</code></pre>\n",
@@ -14,65 +14,65 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "setup",
-    "time" : {
-      "start" : 1734700688505,
-      "stop" : 1734700688505,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "_session_faker",
-    "time" : {
-      "start" : 1734700688056,
-      "stop" : 1734700688121,
-      "duration" : 65
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "delete_account",
     "time" : {
-      "start" : 1734700688505,
-      "stop" : 1734700688505,
+      "start" : 1734700830893,
+      "stop" : 1734700830893,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1734700830893,
+      "stop" : 1734700830893,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1734700688121,
-      "stop" : 1734700688505,
-      "duration" : 384
+      "start" : 1734700830495,
+      "stop" : 1734700830893,
+      "duration" : 398
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1734700830429,
+      "stop" : 1734700830495,
+      "duration" : 66
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0
   } ],
   "testStage" : {
     "description" : "\n    This test verifies that a new account can be successfully registered using valid email, password, and username information.\n    ",
@@ -80,366 +80,366 @@
     "steps" : [ {
       "name" : "Open the page https://app.todoist.com/auth/signup.",
       "time" : {
-        "start" : 1734700688508,
-        "stop" : 1734700689039,
-        "duration" : 531
+        "start" : 1734700830896,
+        "stop" : 1734700831455,
+        "duration" : 559
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Verify that the page heading is \"Sign up\".",
       "time" : {
-        "start" : 1734700689039,
-        "stop" : 1734700690070,
-        "duration" : 1031
+        "start" : 1734700831455,
+        "stop" : 1734700831606,
+        "duration" : 151
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Enter email into the \"Email\" field.",
       "time" : {
-        "start" : 1734700690070,
-        "stop" : 1734700690222,
-        "duration" : 152
+        "start" : 1734700831606,
+        "stop" : 1734700831821,
+        "duration" : 215
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "email",
-        "value" : "'gibsondrew@example.org'"
+        "value" : "'emmagriffith@example.org'"
       } ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0
     }, {
       "name" : "Enter password into the \"Password\" field.",
       "time" : {
-        "start" : 1734700690222,
-        "stop" : 1734700690318,
-        "duration" : 96
+        "start" : 1734700831821,
+        "stop" : 1734700831920,
+        "duration" : 99
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "password",
-        "value" : "'%40Uvk+js0I^'"
+        "value" : "')d3myrugW)wC'"
       } ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0
     }, {
       "name" : "Click on the \"Sign up with Email\" button.",
       "time" : {
-        "start" : 1734700690318,
-        "stop" : 1734700690385,
-        "duration" : 67
+        "start" : 1734700831920,
+        "stop" : 1734700831991,
+        "duration" : 71
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Enter username into the \"Your name\" field.",
       "time" : {
-        "start" : 1734700690385,
-        "stop" : 1734700695111,
-        "duration" : 4726
+        "start" : 1734700831991,
+        "stop" : 1734700836233,
+        "duration" : 4242
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "username",
-        "value" : "'Brandon'"
+        "value" : "'John'"
       } ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0
     }, {
       "name" : "Click on the \"Continue\" button.",
       "time" : {
-        "start" : 1734700695112,
-        "stop" : 1734700695627,
-        "duration" : 515
+        "start" : 1734700836233,
+        "stop" : 1734700836764,
+        "duration" : 531
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Select \"Personal\" checkbox.",
       "time" : {
-        "start" : 1734700695627,
-        "stop" : 1734700695685,
-        "duration" : 58
+        "start" : 1734700836764,
+        "stop" : 1734700836853,
+        "duration" : 89
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Select \"Education\" checkbox.",
       "time" : {
-        "start" : 1734700695685,
-        "stop" : 1734700695743,
-        "duration" : 58
+        "start" : 1734700836854,
+        "stop" : 1734700836931,
+        "duration" : 77
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Click on the \"Launch Todoist\" button.",
       "time" : {
-        "start" : 1734700695744,
-        "stop" : 1734700697365,
-        "duration" : 1621
+        "start" : 1734700836931,
+        "stop" : 1734700838581,
+        "duration" : 1650
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
       "time" : {
-        "start" : 1734700697365,
-        "stop" : 1734700697390,
-        "duration" : 25
+        "start" : 1734700838581,
+        "stop" : 1734700838614,
+        "duration" : 33
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0
     }, {
       "name" : "Verify that the sidebar contains username.",
       "time" : {
-        "start" : 1734700697390,
-        "stop" : 1734700697418,
-        "duration" : 28
+        "start" : 1734700838614,
+        "stop" : 1734700838667,
+        "duration" : 53
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "username",
-        "value" : "'Brandon'"
+        "value" : "'John'"
       } ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0
     }, {
       "name" : "Postconditions: Delete the created account.",
       "time" : {
-        "start" : 1734700697418,
-        "stop" : 1734700702379,
-        "duration" : 4961
+        "start" : 1734700838667,
+        "stop" : 1734700844564,
+        "duration" : 5897
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Open the page https://app.todoist.com/app/today.",
         "time" : {
-          "start" : 1734700697418,
-          "stop" : 1734700698431,
-          "duration" : 1013
+          "start" : 1734700838667,
+          "stop" : 1734700839773,
+          "duration" : 1106
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       }, {
         "name" : "Click on the \"Username\" button.",
         "time" : {
-          "start" : 1734700698431,
-          "stop" : 1734700699271,
-          "duration" : 840
+          "start" : 1734700839773,
+          "stop" : 1734700840608,
+          "duration" : 835
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       }, {
         "name" : "Click on the \"Settings\" button.",
         "time" : {
-          "start" : 1734700699271,
-          "stop" : 1734700699402,
-          "duration" : 131
+          "start" : 1734700840609,
+          "stop" : 1734700840763,
+          "duration" : 154
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       }, {
         "name" : "Click on the \"Delete account\" button.",
         "time" : {
-          "start" : 1734700699403,
-          "stop" : 1734700700563,
-          "duration" : 1160
+          "start" : 1734700840763,
+          "stop" : 1734700842130,
+          "duration" : 1367
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       }, {
         "name" : "Enter email into the \"Todoist email\" field.",
         "time" : {
-          "start" : 1734700700563,
-          "stop" : 1734700700742,
-          "duration" : 179
+          "start" : 1734700842130,
+          "stop" : 1734700842355,
+          "duration" : 225
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "email",
-          "value" : "'gibsondrew@example.org'"
+          "value" : "'emmagriffith@example.org'"
         } ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : true
+        "hasContent" : true,
+        "attachmentsCount" : 0
       }, {
         "name" : "Enter password into the \"Todoist password\" field.",
         "time" : {
-          "start" : 1734700700742,
-          "stop" : 1734700700861,
-          "duration" : 119
+          "start" : 1734700842355,
+          "stop" : 1734700842490,
+          "duration" : 135
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "password",
-          "value" : "'%40Uvk+js0I^'"
+          "value" : "')d3myrugW)wC'"
         } ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : true
+        "hasContent" : true,
+        "attachmentsCount" : 0
       }, {
         "name" : "Click on the \"Delete account\" button.",
         "time" : {
-          "start" : 1734700700861,
-          "stop" : 1734700700925,
-          "duration" : 64
+          "start" : 1734700842490,
+          "stop" : 1734700842556,
+          "duration" : 66
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       }, {
         "name" : "Verify that the page with the URL https://app.todoist.com/auth/account-deleted is opened.",
         "time" : {
-          "start" : 1734700700925,
-          "stop" : 1734700702379,
-          "duration" : 1454
+          "start" : 1734700842556,
+          "stop" : 1734700844564,
+          "duration" : 2008
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
         "stepsCount" : 0,
-        "hasContent" : false
+        "hasContent" : false,
+        "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 8,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "stepsCount" : 21,
-    "hasContent" : true
+    "hasContent" : true,
+    "attachmentsCount" : 0
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1734700702381,
-      "stop" : 1734700702480,
-      "duration" : 99
+      "start" : 1734700844566,
+      "stop" : 1734700844652,
+      "duration" : 86
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Registration"
-  }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "feature",
+    "value" : "Registration"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -451,7 +451,7 @@
     "value" : "TestRegistration"
   }, {
     "name" : "host",
-    "value" : "1c6a3ffc2f55"
+    "value" : "cb573b35e461"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -481,11 +481,19 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
+        "uid" : "e4a9154e6d9161fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734700688506,
+          "stop" : 1734700702380,
+          "duration" : 13874
+        }
+      }, {
         "uid" : "f8d1e3b577e8c0af",
         "status" : "passed",
         "time" : {
@@ -505,6 +513,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "e4a9154e6d9161fa.json",
+  "source" : "2ef8883b55b3602f.json",
   "parameterValues" : [ ]
 }

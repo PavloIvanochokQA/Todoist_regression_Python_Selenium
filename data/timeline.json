@@ -1,39 +1,39 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "1c6a3ffc2f55",
+    "name" : "cb573b35e461",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
         "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
-        "uid" : "e9e578847310dccd",
-        "parentUid" : "a9fdca735ac9f10d21cfaf46bce67158",
+        "uid" : "6dacd9f658203c46",
+        "parentUid" : "17101f2f4c7de62b4f42e81e8bbfb334",
         "status" : "passed",
         "time" : {
-          "start" : 1734700702846,
-          "stop" : 1734700706166,
-          "duration" : 3320
+          "start" : 1734700844979,
+          "stop" : 1734700847279,
+          "duration" : 2300
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC01: Successful registration of a new account with valid information.",
-        "uid" : "e4a9154e6d9161fa",
-        "parentUid" : "a9fdca735ac9f10d21cfaf46bce67158",
+        "uid" : "2ef8883b55b3602f",
+        "parentUid" : "17101f2f4c7de62b4f42e81e8bbfb334",
         "status" : "passed",
         "time" : {
-          "start" : 1734700688506,
-          "stop" : 1734700702380,
-          "duration" : 13874
+          "start" : 1734700830893,
+          "stop" : 1734700844565,
+          "duration" : 13672
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a9fdca735ac9f10d21cfaf46bce67158"
+      "uid" : "17101f2f4c7de62b4f42e81e8bbfb334"
     } ],
-    "uid" : "68b0eb945cfd162cbc6b3671206f9a30"
+    "uid" : "ae1de9a379c85b23b8ad36fad1a3a6f4"
   } ],
   "name" : "timeline"
 }
