@@ -3,6 +3,7 @@ import random
 import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
+from utils.screenshot import take_screenshot
 
 
 class TestRegistration(BaseTest):
@@ -20,19 +21,23 @@ class TestRegistration(BaseTest):
         email = fake.email
         password = fake.password
         username = fake.username
-        # Steps:
-        self.signup_page.open()
-        self.signup_page.is_page_heading_signup()
-        self.signup_page.enter_email(email)
-        self.signup_page.enter_password(password)
-        self.signup_page.click_signup_with_email_button()
-        self.signup_page.enter_username(username)
-        self.signup_page.click_continue_button()
-        self.signup_page.select_personal_checkbox()
-        self.signup_page.select_education_checkbox()
-        self.signup_page.click_launch_todoist_button()
-        self.home_page.is_opened()
-        self.home_page.is_sidebar_contains_username(username)
+        try:
+            # Steps:
+            self.signup_page.open()
+            self.signup_page.is_page_heading_signup()
+            self.signup_page.enter_email(email)
+            self.signup_page.enter_password(password)
+            self.signup_page.click_signup_with_email_button()
+            self.signup_page.enter_username(username)
+            self.signup_page.click_continue_button()
+            self.signup_page.select_personal_checkbox()
+            self.signup_page.select_education_checkbox()
+            self.signup_page.click_launch_todoist_button()
+            self.home_page.is_opened()
+            self.home_page.is_sidebar_contains_username(username)
+        except Exception as e:
+            take_screenshot(self.driver, "Registration Test Failed")
+            raise e
         # Postconditions:
         with allure.step("Postconditions: Delete the created account."):
             delete_account(email, password)
@@ -51,15 +56,20 @@ class TestRegistration(BaseTest):
         password = fake.password
         invalid_email = self.data.EMAIL
         invalid_password = str(random.randint(1000000, 9999999))
-        # Steps:
-        self.signup_page.open()
-        self.signup_page.is_page_heading_signup()
-        self.signup_page.enter_email(invalid_email)
-        self.signup_page.enter_password(password)
-        self.signup_page.click_signup_with_email_button()
-        self.signup_page.is_error_message_visible()
-        self.signup_page.is_page_heading_signup()
-        self.signup_page.enter_email(email)
-        self.signup_page.enter_password(invalid_password)
-        self.signup_page.click_signup_with_email_button()
-        self.signup_page.is_page_heading_signup()
+        try:
+            # Steps:
+            self.signup_page.open()
+            self.signup_page.is_page_heading_signup()
+            self.signup_page.enter_email(invalid_email)
+            self.signup_page.enter_password(password)
+            self.signup_page.click_signup_with_email_button()
+            self.signup_page.is_error_message_visible()
+            self.signup_page.is_page_heading_signup()
+            self.signup_page.enter_email(email)
+            self.signup_page.enter_password(invalid_password)
+            self.signup_page.click_signup_with_email_button()
+            self.signup_page.is_page_heading_signup()
+        except Exception as e:
+            take_screenshot(self.driver, "Unsuccessful Registration Test Failed")
+            raise e
+        

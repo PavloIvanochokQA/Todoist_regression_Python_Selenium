@@ -2,6 +2,7 @@ import allure
 import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
+from utils.screenshot import take_screenshot
 
 
 class TestProjectsManagement(BaseTest):
@@ -15,17 +16,21 @@ class TestProjectsManagement(BaseTest):
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("TC23: Successful creation of a new Task List.")
     def test_task_list_creation(self, login, delete_project):
-        fake = FakeDataGenerator()
-        project_name = fake.project_name
-        # Steps:
-        self.home_page.click_my_projects_button()
-        self.projects_page.is_opened()
-        self.projects_page.click_my_projects_menu_button()
-        self.projects_page.click_add_project_button()
-        self.projects_page.enter_project_name(project_name)
-        self.projects_page.choose_list()
-        self.projects_page.click_add_button()
-        self.projects_page.is_my_projects_section_contains_project(project_name)
+        try:
+            fake = FakeDataGenerator()
+            project_name = fake.project_name
+            # Steps:
+            self.home_page.click_my_projects_button()
+            self.projects_page.is_opened()
+            self.projects_page.click_my_projects_menu_button()
+            self.projects_page.click_add_project_button()
+            self.projects_page.enter_project_name(project_name)
+            self.projects_page.choose_list()
+            self.projects_page.click_add_button()
+            self.projects_page.is_my_projects_section_contains_project(project_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task List Creation Test Failed")
+            raise e
         # Postconditions:
         with allure.step("Postconditions: Delete the created project."):
             delete_project(project_name)
@@ -44,8 +49,8 @@ class TestProjectsManagement(BaseTest):
         first_section_name = "To Do"
         second_section_name = "In Progress"
         third_section_name = "Done"
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_my_projects_button()
             self.projects_page.is_opened()
             self.projects_page.click_my_projects_menu_button()
@@ -66,10 +71,12 @@ class TestProjectsManagement(BaseTest):
             self.projects_page.is_board_contains_section(first_section_name)
             self.projects_page.is_board_contains_section(second_section_name)
             self.projects_page.is_board_contains_section(third_section_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Board Creation Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created project."):
-                delete_project(project_name)
+        with allure.step("Postconditions: Delete the created project."):
+            delete_project(project_name)
 
     @pytest.mark.order(25)
     @pytest.mark.regression
@@ -84,8 +91,8 @@ class TestProjectsManagement(BaseTest):
         fake = FakeDataGenerator()
         new_project_name = fake.project_name
         is_project_name_changed = False
-        # Steps:
         try:
+            # Steps:
             self.projects_page.click_more_actions_button()
             self.projects_page.click_edit_button()
             self.projects_page.enter_project_name(new_project_name)
@@ -94,11 +101,13 @@ class TestProjectsManagement(BaseTest):
             self.projects_page.is_my_projects_section_contains_project(new_project_name)
             is_project_name_changed = True
             self.projects_page.is_board_sections_visible()
+        except Exception as e:
+            take_screenshot(self.driver, "Project Name and Type Change Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created project."):
-                project_name_to_use = new_project_name if is_project_name_changed else project_name
-                delete_project(project_name_to_use)
+        with allure.step("Postconditions: Delete the created project."):
+            project_name_to_use = new_project_name if is_project_name_changed else project_name
+            delete_project(project_name_to_use)
 
     @pytest.mark.order(26)
     @pytest.mark.regression
@@ -110,12 +119,16 @@ class TestProjectsManagement(BaseTest):
     @allure.title("TC26: Successful deletion of a Project.")
     def test_project_deletion(self, login, create_task_list):
         project_name = create_task_list
-        # Steps:
-        self.home_page.click_my_projects_button()
-        self.projects_page.open_project(project_name)
-        self.projects_page.click_more_actions_button()
-        self.projects_page.click_delete_button()
-        self.projects_page.is_my_project_section_not_contains_project(project_name)
+        try:
+            # Steps:
+            self.home_page.click_my_projects_button()
+            self.projects_page.open_project(project_name)
+            self.projects_page.click_more_actions_button()
+            self.projects_page.click_delete_button()
+            self.projects_page.is_my_project_section_not_contains_project(project_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Project Deletion Test Failed")
+            raise e
 
     @pytest.mark.order(27)
     @pytest.mark.regression
@@ -127,13 +140,17 @@ class TestProjectsManagement(BaseTest):
     @allure.title("TC27: Unsuccessful creation of a new Project due to invalid information.")
     def test_unsuccessful_project_creation(self, login):
         project_name = ""
-        # Steps:
-        self.home_page.click_my_projects_button()
-        self.projects_page.click_my_projects_menu_button()
-        self.projects_page.click_add_project_button()
-        self.projects_page.enter_project_name(project_name)
-        self.projects_page.choose_list()
-        self.projects_page.is_add_button_disabled()
+        try:
+            # Steps:
+            self.home_page.click_my_projects_button()
+            self.projects_page.click_my_projects_menu_button()
+            self.projects_page.click_add_project_button()
+            self.projects_page.enter_project_name(project_name)
+            self.projects_page.choose_list()
+            self.projects_page.is_add_button_disabled()
+        except Exception as e:
+            take_screenshot(self.driver, "Unsuccessful Project Creation Test Failed")
+            raise e
 
     @pytest.mark.order(28)
     @pytest.mark.regression
@@ -146,19 +163,21 @@ class TestProjectsManagement(BaseTest):
     def test_task_list_duplication(self, login, create_task_list, create_task, delete_project):
         project_name = create_task_list
         task_name, task_description, task_priority = create_task
-        # Steps:
         try:
+            # Steps:
             self.projects_page.click_more_actions_button()
             self.projects_page.click_duplicate_button()
             self.projects_page.is_my_projects_section_contains_project("Copy of " + project_name)
             self.projects_page.click_my_projects_button()
             self.projects_page.open_project("Copy of " + project_name)
             self.projects_page.is_task_list_contains_task(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task List Duplication Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created project and its duplicate."):
-                delete_project(project_name)
-                delete_project("Copy of " + project_name)
+        with allure.step("Postconditions: Delete the created project and its duplicate."):
+            delete_project(project_name)
+            delete_project("Copy of " + project_name)
 
     @pytest.mark.order(29)
     @pytest.mark.regression
@@ -170,8 +189,8 @@ class TestProjectsManagement(BaseTest):
     @allure.title("TC29: Successful archiving of a Project.")
     def test_project_archiving(self, login, create_task_list, delete_project):
         project_name = create_task_list
-        # Steps:
         try:
+            # Steps:
             self.projects_page.click_more_actions_button()
             self.projects_page.click_archive_button()
             self.projects_page.is_my_project_section_not_contains_project(project_name)
@@ -183,10 +202,12 @@ class TestProjectsManagement(BaseTest):
             self.projects_page.is_archived_message_visible()
             self.projects_page.click_unarchive_button()
             self.projects_page.is_my_projects_section_contains_project(project_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Project Archiving Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created project."):
-                delete_project(project_name)
+        with allure.step("Postconditions: Delete the created project."):
+            delete_project(project_name)
 
     @pytest.mark.order(30)
     @pytest.mark.regression
@@ -200,8 +221,8 @@ class TestProjectsManagement(BaseTest):
         project_name, first_section, second_section, third_section = create_task_board
         fake = FakeDataGenerator()
         task_name = fake.task_name
-        # Steps:
         try:
+            # Steps:
             self.projects_page.create_task_in_section(first_section, task_name)
             self.projects_page.click_more_actions_button_on_task(task_name)
             self.projects_page.move_task_to_section(second_section, project_name)
@@ -209,7 +230,9 @@ class TestProjectsManagement(BaseTest):
             self.projects_page.click_more_actions_button_on_task(task_name)
             self.projects_page.move_task_to_section(third_section, project_name)
             self.projects_page.is_section_contains_task(task_name, third_section)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Moving on Board Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created project."):
-                delete_project(project_name)
+        with allure.step("Postconditions: Delete the created project."):
+            delete_project(project_name)

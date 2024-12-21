@@ -3,6 +3,7 @@ import random
 import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
+from utils.screenshot import take_screenshot
 
 
 class TestTaskManagement(BaseTest):
@@ -20,8 +21,8 @@ class TestTaskManagement(BaseTest):
         task_name = fake.task_name
         task_description = fake.task_description
         task_priority = random.randint(1, 4)
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_add_task_button()
             self.home_page.enter_task_name(task_name)
             self.home_page.enter_description(task_description)
@@ -32,10 +33,12 @@ class TestTaskManagement(BaseTest):
             self.task_page.is_opened()
             self.task_page.is_task_contains_description(task_description)
             self.task_page.is_task_has_priority(task_priority)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Creation Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(13)
     @pytest.mark.regression
@@ -52,8 +55,8 @@ class TestTaskManagement(BaseTest):
         new_task_description = fake.task_description
         new_task_priority = random.randint(1, 4)
         is_task_name_changed = False
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_edit_button(task_name)
             self.home_page.enter_task_name(new_task_name)
             self.home_page.enter_description(new_task_description)
@@ -65,11 +68,13 @@ class TestTaskManagement(BaseTest):
             self.task_page.is_opened()
             self.task_page.is_task_contains_description(new_task_description)
             self.task_page.is_task_has_priority(new_task_priority)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Editing Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                task_name_to_use = new_task_name if is_task_name_changed else task_name
-                delete_task(task_name_to_use)
+        with allure.step("Postconditions: Delete the created task."):
+            task_name_to_use = new_task_name if is_task_name_changed else task_name
+            delete_task(task_name_to_use)
 
     @pytest.mark.order(14)
     @pytest.mark.regression
@@ -85,8 +90,8 @@ class TestTaskManagement(BaseTest):
         subtask_name = fake.task_name
         subtask_description = fake.task_description
         subtask_priority = random.randint(1, 4)
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.is_opened()
             self.task_page.click_add_subtask_button()
@@ -98,10 +103,12 @@ class TestTaskManagement(BaseTest):
             self.task_page.open_subtask(subtask_name)
             self.task_page.is_task_contains_description(subtask_description)
             self.task_page.is_task_has_priority(subtask_priority)
+        except Exception as e:
+            take_screenshot(self.driver, "Subtask Creation Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task"):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task"):
+            delete_task(task_name)
 
     @pytest.mark.order(15)
     @pytest.mark.regression
@@ -116,8 +123,8 @@ class TestTaskManagement(BaseTest):
         hour = random.randint(0, 23)
         minute = random.randint(0, 59)
         random_time = f"{hour:02d}:{minute:02d}"
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.is_opened()
             self.task_page.click_due_date_button()
@@ -129,26 +136,32 @@ class TestTaskManagement(BaseTest):
             self.task_page.click_due_date_button()
             self.task_page.click_today_button()
             self.task_page.is_task_contains_due_date(f"Today {random_time}")
+        except Exception as e:
+            take_screenshot(self.driver, "Due Date and Time Update Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(16)
     @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
-    This test verifies that a task can be successfully marked as completed and moved to the \"Completed\" section.
+    This test verifies that a task can be successfully marked as completed and moved to the "Completed" section.
     """)
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("TC16: Successful task completion and marking as completed.")
     def test_mark_task_as_completed(self, login, create_task):
         task_name, task_description, task_priority = create_task
-        # Steps:
-        self.home_page.click_checkbox_on_task(task_name)
-        self.home_page.is_task_list_not_contains_task(task_name)
-        self.home_page.open_completed_section()
-        self.home_page.is_completed_section_contains_task(task_name)
+        try:
+            # Steps:
+            self.home_page.click_checkbox_on_task(task_name)
+            self.home_page.is_task_list_not_contains_task(task_name)
+            self.home_page.open_completed_section()
+            self.home_page.is_completed_section_contains_task(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Mark Task As Completed Test Failed")
+            raise e
 
     @pytest.mark.order(17)
     @pytest.mark.regression
@@ -160,11 +173,15 @@ class TestTaskManagement(BaseTest):
     @allure.title("TC17: Successful task deletion.")
     def test_task_deletion(self, login, create_task):
         task_name, task_description, task_priority = create_task
-        # Steps:
-        self.home_page.click_more_actions_button(task_name)
-        self.home_page.click_delete_button()
-        self.home_page.confirm_deletion()
-        self.home_page.is_task_list_not_contains_task(task_name)
+        try:
+            # Steps:
+            self.home_page.click_more_actions_button(task_name)
+            self.home_page.click_delete_button()
+            self.home_page.confirm_deletion()
+            self.home_page.is_task_list_not_contains_task(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Deletion Test Failed")
+            raise e
 
     @pytest.mark.order(18)
     @pytest.mark.regression
@@ -179,22 +196,25 @@ class TestTaskManagement(BaseTest):
         link = random.choice(links)
         fake = FakeDataGenerator()
         task_name = fake.task_name
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_add_task_button()
             self.home_page.enter_task_name(task_name + " " + link)
             self.home_page.click_submit_add_task_button()
             self.home_page.click_link_in_task(task_name)
             self.home_page.is_link_opened(link)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Creation with Link Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(19)
     @pytest.mark.regression
     @allure.feature("Task Management")
-    @allure.description("""This test verifies that a user can successfully add a comment to a task and that the comment appears in the "Comments" section.
+    @allure.description("""
+    This test verifies that a user can successfully add a comment to a task and that the comment appears in the "Comments" section.
     """)
     @allure.severity(allure.severity_level.MINOR)
     @allure.title("TC19: Successful addition of a comment to a task.")
@@ -202,18 +222,20 @@ class TestTaskManagement(BaseTest):
         task_name, task_description, task_priority = create_task
         fake = FakeDataGenerator()
         comment = fake.comment
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.is_opened()
             self.task_page.click_comment_button()
             self.task_page.enter_comment(comment)
             self.task_page.click_add_comment_button()
             self.task_page.is_comments_section_contains_comment(comment)
+        except Exception as e:
+            take_screenshot(self.driver, "Add Comment Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(20)
     @pytest.mark.regression
@@ -228,8 +250,8 @@ class TestTaskManagement(BaseTest):
         task_name, task_description, task_priority = create_task
         labels = ["Education", "Sport", "Personal", "Work", "Hobby"]
         label = random.choice(labels)
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.is_opened()
             self.task_page.click_labels_button()
@@ -237,10 +259,12 @@ class TestTaskManagement(BaseTest):
             self.task_page.click_on_label(label)
             self.home_page.is_page_heading_contains_label(label)
             self.home_page.is_task_list_contains_task(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Add Label Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(21)
     @pytest.mark.regression
@@ -253,16 +277,18 @@ class TestTaskManagement(BaseTest):
     @allure.title("TC21: Successful task duplication.")
     def test_task_duplication(self, login, create_task, delete_task):
         task_name, task_description, task_priority = create_task
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_more_actions_button(task_name)
             self.home_page.click_duplicate_button()
             self.home_page.is_task_list_contains_duplicate(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Duplication Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task and its duplicate."):
-                delete_task(task_name)
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task and its duplicate."):
+            delete_task(task_name)
+            delete_task(task_name)
 
     @pytest.mark.order(22)
     @pytest.mark.regression
@@ -277,9 +303,14 @@ class TestTaskManagement(BaseTest):
         task_name = ""
         task_description = fake.task_description
         task_priority = random.randint(1, 4)
-        # Steps:
-        self.home_page.click_add_task_button()
-        self.home_page.enter_task_name(task_name)
-        self.home_page.enter_description(task_description)
-        self.home_page.set_task_priority(task_priority)
-        self.home_page.is_add_task_button_disabled()
+        try:
+            # Steps:
+            self.home_page.click_add_task_button()
+            self.home_page.enter_task_name(task_name)
+            self.home_page.enter_description(task_description)
+            self.home_page.set_task_priority(task_priority)
+            self.home_page.is_add_task_button_disabled()
+        except Exception as e:
+            take_screenshot(self.driver, "Unsuccessful Task Creation Test Failed")
+            raise e
+

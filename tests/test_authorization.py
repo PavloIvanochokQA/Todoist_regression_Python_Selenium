@@ -16,14 +16,18 @@ class TestAuthorization(BaseTest):
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("TC02: Successful login to an existing account with valid information.")
     def test_authorization(self):
-        # Steps:
-        self.login_page.open()
-        self.login_page.is_page_heading_login()
-        self.login_page.enter_email(self.data.EMAIL)
-        self.login_page.enter_password(self.data.PASSWORD)
-        self.login_page.click_login_button()
-        self.home_page.is_opened()
-        self.home_page.is_sidebar_contains_username(self.data.USERNAME)
+        try:
+            # Steps:
+            self.login_page.open()
+            self.login_page.is_page_heading_login()
+            self.login_page.enter_email(self.data.EMAIL)
+            self.login_page.enter_password(self.data.PASSWORD)
+            self.login_page.click_login_button()
+            self.home_page.is_opened()
+            self.home_page.is_sidebar_contains_username(self.data.USERNAME)
+        except Exception as e:
+            take_screenshot(self.driver, "Authorization Test Failed")
+            raise e
 
     @pytest.mark.order(3)
     @pytest.mark.regression
@@ -34,11 +38,15 @@ class TestAuthorization(BaseTest):
     @allure.severity(allure.severity_level.NORMAL)
     @allure.title("TC03: Successful logout from an account.")
     def test_logout(self, login):
-        # Steps:
-        self.home_page.click_username_button()
-        self.home_page.click_logout_button()
-        self.login_page.is_opened()
-        self.login_page.is_page_heading_login()
+        try:
+            # Steps:
+            self.home_page.click_username_button()
+            self.home_page.click_logout_button()
+            self.login_page.is_opened()
+            self.login_page.is_page_heading_login()
+        except Exception as e:
+            take_screenshot(self.driver, "Logout Test Failed")
+            raise e
 
     @pytest.mark.order(4)
     @pytest.mark.regression
@@ -48,7 +56,7 @@ class TestAuthorization(BaseTest):
     """)
     @allure.severity(allure.severity_level.NORMAL)
     @allure.title("TC04: Ability to login using a Google account.")
-    # @pytest.mark.skip(reason="The test is skipped because a CAPTCHA pass is sometimes required")
+    @pytest.mark.skip(reason="The test is skipped because a CAPTCHA pass is sometimes required")
     def test_authorization_using_google(self):
         try:
             # Steps:
@@ -57,7 +65,7 @@ class TestAuthorization(BaseTest):
             self.login_page.click_continue_with_google_button()
             self.google_account_page.is_opened()
             self.google_account_page.enter_gmail(self.data.GMAIL)
-            # self.google_account_page.click_confirm_gmail_button()
+            self.google_account_page.click_confirm_gmail_button()
             self.google_account_page.enter_gmail_password(self.data.GMAIL_PASSWORD)
             self.google_account_page.click_confirm_password_button()
             self.home_page.is_opened()
@@ -80,16 +88,20 @@ class TestAuthorization(BaseTest):
         password = self.data.PASSWORD
         invalid_email = fake.email
         invalid_password = fake.password
-        # Steps:
-        self.login_page.open()
-        self.login_page.is_page_heading_login()
-        self.login_page.enter_email(invalid_email)
-        self.login_page.enter_password(password)
-        self.login_page.click_login_button()
-        self.login_page.is_error_message_visible()
-        self.login_page.is_opened()
-        self.login_page.enter_email(email)
-        self.login_page.enter_password(invalid_password)
-        self.login_page.click_login_button()
-        self.login_page.is_error_message_visible()
-        self.login_page.is_opened()
+        try:
+            # Steps:
+            self.login_page.open()
+            self.login_page.is_page_heading_login()
+            self.login_page.enter_email(invalid_email)
+            self.login_page.enter_password(password)
+            self.login_page.click_login_button()
+            self.login_page.is_error_message_visible()
+            self.login_page.is_opened()
+            self.login_page.enter_email(email)
+            self.login_page.enter_password(invalid_password)
+            self.login_page.click_login_button()
+            self.login_page.is_error_message_visible()
+            self.login_page.is_opened()
+        except Exception as e:
+            take_screenshot(self.driver, "Unsuccessful Authorization Test Failed")
+            raise e

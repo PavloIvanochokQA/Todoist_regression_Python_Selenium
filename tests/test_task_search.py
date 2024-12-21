@@ -3,6 +3,7 @@ import random
 import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
+from utils.screenshot import take_screenshot
 
 
 class TestTaskSearch(BaseTest):
@@ -17,17 +18,19 @@ class TestTaskSearch(BaseTest):
     @allure.title("TC31: Successful search for a task by its name.")
     def test_task_search_by_name(self, login, create_task, delete_task):
         task_name, task_description, task_priority = create_task
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_search_button()
             self.home_page.enter_search_request(task_name)
             self.home_page.is_search_results_section_contains_task(task_name)
             self.home_page.click_on_search_result(task_name)
             self.task_page.is_opened()
+        except Exception as e:
+            take_screenshot(self.driver, "Task Search by Name Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(32)
     @pytest.mark.regression
@@ -39,18 +42,20 @@ class TestTaskSearch(BaseTest):
     @allure.title("TC32: Successful search for a task by its description.")
     def test_task_search_by_description(self, login, create_task, delete_task):
         task_name, task_description, task_priority = create_task
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_search_button()
             self.home_page.enter_search_request(task_description)
             self.home_page.is_search_results_section_contains_task(task_description)
             self.home_page.click_on_search_result(task_description)
             self.task_page.is_opened()
             self.task_page.is_task_contains_description(task_description)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Search by Description Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(36)
     @pytest.mark.regression
@@ -65,8 +70,8 @@ class TestTaskSearch(BaseTest):
         link = random.choice(links)
         fake = FakeDataGenerator()
         task_name = fake.task_name
-        # Steps:
         try:
+            # Steps:
             self.home_page.click_add_task_button()
             self.home_page.enter_task_name(task_name + " " + link)
             self.home_page.click_submit_add_task_button()
@@ -75,10 +80,12 @@ class TestTaskSearch(BaseTest):
             self.home_page.press_enter()
             self.search_page.is_page_heading_contains_search_result(link)
             self.search_page.is_task_list_contains_task(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Search by Link Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(37)
     @pytest.mark.regression
@@ -92,8 +99,8 @@ class TestTaskSearch(BaseTest):
         task_name, task_description, task_priority = create_task
         fake = FakeDataGenerator()
         comment = fake.comment
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.click_comment_button()
             self.task_page.enter_comment(comment)
@@ -105,10 +112,12 @@ class TestTaskSearch(BaseTest):
             self.search_page.click_comments_button()
             self.search_page.is_page_heading_contains_search_result(comment)
             self.search_page.is_task_list_contains_task_with_comment(task_name)
+        except Exception as e:
+            take_screenshot(self.driver, "Task Search by Comment Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(38)
     @pytest.mark.regression
@@ -122,8 +131,8 @@ class TestTaskSearch(BaseTest):
         task_name, task_description, task_priority = create_task
         fake = FakeDataGenerator()
         subtask_name = fake.task_name
-        # Steps:
         try:
+            # Steps:
             self.home_page.open_task(task_name)
             self.task_page.click_add_subtask_button()
             self.task_page.enter_subtask_name(subtask_name)
@@ -134,10 +143,12 @@ class TestTaskSearch(BaseTest):
             self.home_page.is_search_results_section_contains_task(subtask_name)
             self.home_page.click_on_search_result(subtask_name)
             self.task_page.is_opened()
+        except Exception as e:
+            take_screenshot(self.driver, "Subtask Search by Name Test Failed")
+            raise e
         # Postconditions:
-        finally:
-            with allure.step("Postconditions: Delete the created task."):
-                delete_task(task_name)
+        with allure.step("Postconditions: Delete the created task."):
+            delete_task(task_name)
 
     @pytest.mark.order(39)
     @pytest.mark.regression
@@ -150,11 +161,15 @@ class TestTaskSearch(BaseTest):
     def test_unsuccessful_task_search(self, login):
         fake = FakeDataGenerator()
         request = fake.task_name
-        # Steps:
-        self.home_page.click_search_button()
-        self.home_page.enter_search_request(request)
-        self.home_page.press_enter()
-        self.search_page.is_page_heading_contains_search_result(request)
-        self.search_page.is_task_list_empty(request)
-        self.search_page.click_comments_button()
-        self.search_page.is_task_list_empty(request)
+        try:
+            # Steps:
+            self.home_page.click_search_button()
+            self.home_page.enter_search_request(request)
+            self.home_page.press_enter()
+            self.search_page.is_page_heading_contains_search_result(request)
+            self.search_page.is_task_list_empty(request)
+            self.search_page.click_comments_button()
+            self.search_page.is_task_list_empty(request)
+        except Exception as e:
+            take_screenshot(self.driver, "Unsuccessful Task Search Test Failed")
+            raise e

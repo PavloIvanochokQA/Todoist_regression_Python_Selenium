@@ -16,7 +16,7 @@ from config.data import Data
 @pytest.fixture(scope='function', autouse=True)
 def driver(request):
     options = Options()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
@@ -26,7 +26,7 @@ def driver(request):
     yield driver
     driver.quit()
 
-
+                                                                                                                                
 @pytest.fixture(scope="function")
 def login(driver):
     login_page = LoginPage(driver)
