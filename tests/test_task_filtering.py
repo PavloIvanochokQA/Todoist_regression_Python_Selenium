@@ -1,10 +1,13 @@
 import allure
 import random
+import pytest
 from base.base_test import BaseTest
 
 
 class TestTaskFiltering(BaseTest):
 
+    @pytest.mark.order(33)
+    @pytest.mark.regression
     @allure.feature("Task Filtering")
     @allure.description("""
     This test verifies that a user can successfully filter tasks by their priority, ensuring the filtered tasks match the specified priority and display correctly in the task list.
@@ -30,6 +33,8 @@ class TestTaskFiltering(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(34)
+    @pytest.mark.regression
     @allure.feature("Task Filtering")
     @allure.description("""
     This test verifies that a user can successfully filter tasks by their label, ensuring the filtered tasks match the specified label and display correctly in the task list.
@@ -56,6 +61,8 @@ class TestTaskFiltering(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(35)
+    @pytest.mark.regression
     @allure.feature("Task Filtering")
     @allure.description("""
     This test verifies that a user can successfully filter tasks by their due date, ensuring the filtered tasks match the specified date and display correctly in the task list.

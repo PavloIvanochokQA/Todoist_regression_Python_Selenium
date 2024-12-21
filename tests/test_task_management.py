@@ -1,11 +1,14 @@
 import allure
 import random
+import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 
 
 class TestTaskManagement(BaseTest):
 
+    @pytest.mark.order(12)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a task can be successfully created with all required fields filled.
@@ -34,6 +37,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(13)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that the name, description, and priority of a task can be successfully updated.
@@ -66,6 +71,8 @@ class TestTaskManagement(BaseTest):
                 task_name_to_use = new_task_name if is_task_name_changed else task_name
                 delete_task(task_name_to_use)
 
+    @pytest.mark.order(14)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a sub-task can be successfully added to an existing task.
@@ -96,6 +103,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task"):
                 delete_task(task_name)
 
+    @pytest.mark.order(15)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that the due date and time of an existing task can be successfully updated.
@@ -125,6 +134,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(16)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a task can be successfully marked as completed and moved to the \"Completed\" section.
@@ -139,6 +150,8 @@ class TestTaskManagement(BaseTest):
         self.home_page.open_completed_section()
         self.home_page.is_completed_section_contains_task(task_name)
 
+    @pytest.mark.order(17)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a task can be successfully deleted and is no longer visible in the task list.
@@ -153,6 +166,8 @@ class TestTaskManagement(BaseTest):
         self.home_page.confirm_deletion()
         self.home_page.is_task_list_not_contains_task(task_name)
 
+    @pytest.mark.order(18)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.
@@ -176,6 +191,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(19)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""This test verifies that a user can successfully add a comment to a task and that the comment appears in the "Comments" section.
     """)
@@ -198,6 +215,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(20)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a user can successfully add a label to a task.
@@ -223,6 +242,8 @@ class TestTaskManagement(BaseTest):
             with allure.step("Postconditions: Delete the created task."):
                 delete_task(task_name)
 
+    @pytest.mark.order(21)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a user can successfully duplicate a task.
@@ -243,6 +264,8 @@ class TestTaskManagement(BaseTest):
                 delete_task(task_name)
                 delete_task(task_name)
 
+    @pytest.mark.order(22)
+    @pytest.mark.regression
     @allure.feature("Task Management")
     @allure.description("""
     This test verifies that a user cannot create a task with invalid information (when the task name is missing).

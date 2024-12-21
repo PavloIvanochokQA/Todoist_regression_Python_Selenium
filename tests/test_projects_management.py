@@ -1,10 +1,13 @@
 import allure
+import pytest
 from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 
 
 class TestProjectsManagement(BaseTest):
 
+    @pytest.mark.order(23)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a new Task List can be successfully created with a valid name.
@@ -27,6 +30,8 @@ class TestProjectsManagement(BaseTest):
         with allure.step("Postconditions: Delete the created project."):
             delete_project(project_name)
 
+    @pytest.mark.order(24)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a new Task Board can be successfully created with multiple sections.
@@ -66,6 +71,8 @@ class TestProjectsManagement(BaseTest):
             with allure.step("Postconditions: Delete the created project."):
                 delete_project(project_name)
 
+    @pytest.mark.order(25)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that the project name and type can be successfully changed.
@@ -93,6 +100,8 @@ class TestProjectsManagement(BaseTest):
                 project_name_to_use = new_project_name if is_project_name_changed else project_name
                 delete_project(project_name_to_use)
 
+    @pytest.mark.order(26)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully delete an existing project.
@@ -108,6 +117,8 @@ class TestProjectsManagement(BaseTest):
         self.projects_page.click_delete_button()
         self.projects_page.is_my_project_section_not_contains_project(project_name)
 
+    @pytest.mark.order(27)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that the system prevents the creation of a new project when invalid information is provided.
@@ -124,6 +135,8 @@ class TestProjectsManagement(BaseTest):
         self.projects_page.choose_list()
         self.projects_page.is_add_button_disabled()
 
+    @pytest.mark.order(28)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.
@@ -147,6 +160,8 @@ class TestProjectsManagement(BaseTest):
                 delete_project(project_name)
                 delete_project("Copy of " + project_name)
 
+    @pytest.mark.order(29)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully archive a project, confirm its archival in the archived projects section, and restore it back to the active projects section.
@@ -173,6 +188,8 @@ class TestProjectsManagement(BaseTest):
             with allure.step("Postconditions: Delete the created project."):
                 delete_project(project_name)
 
+    @pytest.mark.order(30)
+    @pytest.mark.regression
     @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.
