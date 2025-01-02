@@ -3,52 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Sure clear about it night traditional.\" not found in the \"Completed\" section.",
       "children" : [ {
-        "name" : "TC07: Successful account deletion.",
-        "uid" : "403e2ad0d91891dc",
-        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
+        "name" : "TC16: Successful task completion and marking as completed.",
+        "uid" : "b02848b2ace32050",
+        "parentUid" : "b78b909e8edc0319d9a799e32f417db5",
         "status" : "broken",
         "time" : {
-          "start" : 1735827948002,
-          "stop" : 1735827951156,
-          "duration" : 3154
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "TC36: Successful search for a task that contains links.",
-        "uid" : "881d748ad9775bfa",
-        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735828444115,
-          "stop" : 1735828450188,
-          "duration" : 6073
+          "start" : 1735832225643,
+          "stop" : 1735832242057,
+          "duration" : 16414
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
-      "children" : [ {
-        "name" : "TC24: Successful creation of a new Task Board with sections.",
-        "uid" : "a27e0ee998972505",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735828195498,
-          "stop" : 1735828220410,
-          "duration" : 24912
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+      "uid" : "b78b909e8edc0319d9a799e32f417db5"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
