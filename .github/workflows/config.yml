@@ -47,3 +47,12 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: true
+
+      - name: Send Report
+        run: |
+          curl --location 'https://api.telegram.org/bot${{ secrets.TG }}/sendMessage' \
+          --header 'Content-Type: application/json' \
+          --data '{
+            "chat_id" : 1302748266, 
+            "text": "Testing finished. Report is here: https://pavloivanochokqa.github.io/Todoist_regression_Python_Selenium/"
+          }'
