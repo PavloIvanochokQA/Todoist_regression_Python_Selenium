@@ -30,16 +30,21 @@ jobs:
 
       - name: Get test status
         run: |
-          if [ ${{ steps.ui_tests.outcome }} == "success" ]; then
-            echo "status=All tests passed successfully." >> $GITHUB_ENV
+          echo "Checking test status..."
+          if [[ "${{ steps.ui_tests.outcome }}" == "success" ]]; then
+            echo "All tests passed successfully" > status.txt
           else
-            echo "status=Some tests failed." >> $GITHUB_ENV
+            echo "Some tests failed" > status.txt
           fi
+        id: set_status
+
+      - name: Export status to environment
+        run: echo "STATUS=$(cat status.txt)" >> $GITHUB_ENV
 
       - name: Copy history from gh-pages to allure-results
         run: |
-          mkdir -p allure-results/history
-          cp -R ./.github/gh-pages/history/* allure-results/history/ || echo "No history to copy"
+          sudo mkdir -p allure-results/history
+          sudo cp -R ./.github/gh-pages/history/* allure-results/history/ || echo "No history to copy"
 
       - name: Generate Allure report
         run: |
@@ -47,8 +52,8 @@ jobs:
 
       - name: Update Allure history
         run: |
-          mkdir -p ./.github/gh-pages/history
-          cp -R allure-report/history/* ./.github/gh-pages/history/ || echo "No new history"
+          sudo mkdir -p ./.github/gh-pages/history
+          sudo cp -R allure-report/history/* ./.github/gh-pages/history/ || echo "No new history"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -60,7 +65,7 @@ jobs:
 
       - name: Send Report to Telegram
         env:
-          STATUS: ${{ env.status }}
+          STATUS: ${{ env.STATUS }}
         run: |
           curl --location "https://api.telegram.org/bot${{ secrets.TG }}/sendMessage" \
           --header "Content-Type: application/json" \
