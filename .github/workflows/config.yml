@@ -31,9 +31,9 @@ jobs:
       - name: Get test status
         run: |
           if [ ${{ steps.ui_tests.outcome }} == "success" ]; then
-            echo "status=✅ All tests passed successfully." >> $GITHUB_ENV
+            echo "status=All tests passed successfully." >> $GITHUB_ENV
           else
-            echo "status=❌ Some tests failed." >> $GITHUB_ENV
+            echo "status=Some tests failed." >> $GITHUB_ENV
           fi
 
       - name: Copy history from gh-pages to allure-results

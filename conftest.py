@@ -73,9 +73,9 @@ def delete_account(driver):
 
     def delete(email, password):
         try:
-            time.sleep(2)
+            time.sleep(1)
             delete_management_page.open()
-            time.sleep(2)
+            time.sleep(1)
             delete_management_page.enter_email(email)
             delete_management_page.enter_password(password)
             delete_management_page.click_delete_account_button()
