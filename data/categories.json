@@ -5,14 +5,27 @@
     "children" : [ {
       "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
       "children" : [ {
-        "name" : "TC01: Successful registration of a new account with valid information.",
-        "uid" : "3375baa6eefa551f",
+        "name" : "TC07: Successful account deletion.",
+        "uid" : "403e2ad0d91891dc",
         "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
         "status" : "broken",
         "time" : {
-          "start" : 1735821726928,
-          "stop" : 1735821740042,
-          "duration" : 13114
+          "start" : 1735827948002,
+          "stop" : 1735827951156,
+          "duration" : 3154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC36: Successful search for a task that contains links.",
+        "uid" : "881d748ad9775bfa",
+        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735828444115,
+          "stop" : 1735828450188,
+          "duration" : 6073
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,22 +33,22 @@
       } ],
       "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: The task with name \"May assume ability conference space training.\" was not found in the task list.",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
-        "name" : "TC34: Successful filtering for a task by its label.",
-        "uid" : "4413bcdaa7e629d8",
-        "parentUid" : "e01a419ac7be5924b4cba4e35d5da3e1",
+        "name" : "TC24: Successful creation of a new Task Board with sections.",
+        "uid" : "a27e0ee998972505",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1735822250012,
-          "stop" : 1735822250012,
-          "duration" : 0
+          "start" : 1735828195498,
+          "stop" : 1735828220410,
+          "duration" : 24912
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e01a419ac7be5924b4cba4e35d5da3e1"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

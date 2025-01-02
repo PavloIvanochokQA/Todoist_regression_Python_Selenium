@@ -4,26 +4,26 @@
     "name" : "Registration",
     "children" : [ {
       "name" : "TC01: Successful registration of a new account with valid information.",
-      "uid" : "3375baa6eefa551f",
+      "uid" : "13d0d93cf63835f3",
       "parentUid" : "c0effe69527f658c5af968b745a6e0ad",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1735821726928,
-        "stop" : 1735821740042,
-        "duration" : 13114
+        "start" : 1735827853236,
+        "stop" : 1735827869010,
+        "duration" : 15774
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
-      "uid" : "f124b71c28d8c3d8",
+      "uid" : "ce7450e4a10f9be3",
       "parentUid" : "c0effe69527f658c5af968b745a6e0ad",
       "status" : "passed",
       "time" : {
-        "start" : 1735821812185,
-        "stop" : 1735821815402,
-        "duration" : 3217
+        "start" : 1735827951600,
+        "stop" : 1735827954784,
+        "duration" : 3184
       },
       "flaky" : false,
       "newFailed" : false,
@@ -34,38 +34,38 @@
     "name" : "Authorization",
     "children" : [ {
       "name" : "TC02: Successful login to an existing account with valid information.",
-      "uid" : "c10897e472107c9e",
+      "uid" : "64555c862014faad",
       "parentUid" : "247f290730831b7969ad224582050a32",
       "status" : "passed",
       "time" : {
-        "start" : 1735821740438,
-        "stop" : 1735821745642,
-        "duration" : 5204
+        "start" : 1735827869486,
+        "stop" : 1735827874725,
+        "duration" : 5239
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC03: Successful logout from an account.",
-      "uid" : "5414be7a5a56d79f",
+      "uid" : "960ba6d95f6e99bd",
       "parentUid" : "247f290730831b7969ad224582050a32",
       "status" : "passed",
       "time" : {
-        "start" : 1735821751371,
-        "stop" : 1735821754994,
-        "duration" : 3623
+        "start" : 1735827880105,
+        "stop" : 1735827883419,
+        "duration" : 3314
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC04: Ability to login using a Google account.",
-      "uid" : "a41d853cd2114827",
+      "uid" : "7f6f4e10045ca8b9",
       "parentUid" : "247f290730831b7969ad224582050a32",
       "status" : "skipped",
       "time" : {
-        "start" : 1735821754996,
-        "stop" : 1735821754996,
+        "start" : 1735827883421,
+        "stop" : 1735827883421,
         "duration" : 0
       },
       "flaky" : false,
@@ -73,13 +73,13 @@
       "parameters" : [ ]
     }, {
       "name" : "TC09: Unsuccessful login to an existing account with invalid information.",
-      "uid" : "72d1df7c963b70e4",
+      "uid" : "23cfe25f44c9a77d",
       "parentUid" : "247f290730831b7969ad224582050a32",
       "status" : "passed",
       "time" : {
-        "start" : 1735821815814,
-        "stop" : 1735821820036,
-        "duration" : 4222
+        "start" : 1735827955208,
+        "stop" : 1735827959445,
+        "duration" : 4237
       },
       "flaky" : false,
       "newFailed" : false,
@@ -90,65 +90,65 @@
     "name" : "Profile Management",
     "children" : [ {
       "name" : "TC05: Successful password change.",
-      "uid" : "669f86dfab499efd",
+      "uid" : "d6776f42f004f525",
       "parentUid" : "30c111bc5a23010a41f823677e52d06b",
       "status" : "passed",
       "time" : {
-        "start" : 1735821763560,
-        "stop" : 1735821774853,
-        "duration" : 11293
+        "start" : 1735827898064,
+        "stop" : 1735827908177,
+        "duration" : 10113
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC06: Successful email and username change.",
-      "uid" : "9a68763e10ec5e2b",
+      "uid" : "c65f0f63be7af286",
       "parentUid" : "30c111bc5a23010a41f823677e52d06b",
       "status" : "passed",
       "time" : {
-        "start" : 1735821786438,
-        "stop" : 1735821798127,
-        "duration" : 11689
+        "start" : 1735827927053,
+        "stop" : 1735827939228,
+        "duration" : 12175
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC07: Successful account deletion.",
-      "uid" : "29b1d358ee6d63d",
+      "uid" : "403e2ad0d91891dc",
       "parentUid" : "30c111bc5a23010a41f823677e52d06b",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1735821807370,
-        "stop" : 1735821811860,
-        "duration" : 4490
+        "start" : 1735827948002,
+        "stop" : 1735827951156,
+        "duration" : 3154
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC10: Inability to change the current password with an incorrect password.",
-      "uid" : "e1ef9728454546f2",
+      "uid" : "1af6dee69b6a998d",
       "parentUid" : "30c111bc5a23010a41f823677e52d06b",
       "status" : "passed",
       "time" : {
-        "start" : 1735821829023,
-        "stop" : 1735821839165,
-        "duration" : 10142
+        "start" : 1735827969571,
+        "stop" : 1735827978887,
+        "duration" : 9316
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC11: Inability to delete the account with an incorrect email or password.",
-      "uid" : "8eff61877e3f0e0c",
+      "uid" : "66df46341159c878",
       "parentUid" : "30c111bc5a23010a41f823677e52d06b",
       "status" : "passed",
       "time" : {
-        "start" : 1735821848632,
-        "stop" : 1735821859801,
-        "duration" : 11169
+        "start" : 1735827987732,
+        "stop" : 1735827996841,
+        "duration" : 9109
       },
       "flaky" : false,
       "newFailed" : false,
@@ -159,143 +159,143 @@
     "name" : "Task Management",
     "children" : [ {
       "name" : "TC12: Successful task creation.",
-      "uid" : "ce842e1e451bfe0d",
+      "uid" : "4a140d4451ba2662",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821864971,
-        "stop" : 1735821875943,
-        "duration" : 10972
+        "start" : 1735828003298,
+        "stop" : 1735828014256,
+        "duration" : 10958
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC13: Successful change of name, description, and priority for a task.",
-      "uid" : "fdcedb303ee60905",
+      "uid" : "b4a27bdce0f9e9c2",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821884755,
-        "stop" : 1735821893773,
-        "duration" : 9018
+        "start" : 1735828022886,
+        "stop" : 1735828031911,
+        "duration" : 9025
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC14: Successful addition of a sub-task.",
-      "uid" : "d6b72137f704e383",
+      "uid" : "884f6ef90542dfb5",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821903036,
-        "stop" : 1735821913453,
-        "duration" : 10417
+        "start" : 1735828040520,
+        "stop" : 1735828050620,
+        "duration" : 10100
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC15: Successful change of task due date and time.",
-      "uid" : "638fe5e0ad72694d",
+      "uid" : "4cec08e4e3555ace",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821922519,
-        "stop" : 1735821931988,
-        "duration" : 9469
+        "start" : 1735828059533,
+        "stop" : 1735828068702,
+        "duration" : 9169
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC16: Successful task completion and marking as completed.",
-      "uid" : "1bae81bec0972618",
+      "uid" : "67d956448f5d135f",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821941734,
-        "stop" : 1735821944941,
-        "duration" : 3207
+        "start" : 1735828077574,
+        "stop" : 1735828080774,
+        "duration" : 3200
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC17: Successful task deletion.",
-      "uid" : "3d593642c65b57fd",
+      "uid" : "72d5e75f2fa2f712",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821954282,
-        "stop" : 1735821956036,
-        "duration" : 1754
+        "start" : 1735828089422,
+        "stop" : 1735828091223,
+        "duration" : 1801
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC18: Successful task creation with a link.",
-      "uid" : "1022368d54a25d7e",
+      "uid" : "aa1e3df967e4c18b",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821962367,
-        "stop" : 1735821972408,
-        "duration" : 10041
+        "start" : 1735828096203,
+        "stop" : 1735828106856,
+        "duration" : 10653
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC19: Successful addition of a comment to a task.",
-      "uid" : "d977b495bf54486d",
+      "uid" : "e678c3fb2cee79e8",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821981157,
-        "stop" : 1735821988968,
-        "duration" : 7811
+        "start" : 1735828115276,
+        "stop" : 1735828122897,
+        "duration" : 7621
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC20: Successful addition of a label to a task.",
-      "uid" : "bff44a9c5688aa94",
+      "uid" : "48d0c2d364916f",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735821997961,
-        "stop" : 1735822005644,
-        "duration" : 7683
+        "start" : 1735828131326,
+        "stop" : 1735828139030,
+        "duration" : 7704
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC21: Successful task duplication.",
-      "uid" : "99239a2dd0ffb329",
+      "uid" : "90729b58e2bc66d8",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735822014487,
-        "stop" : 1735822026781,
-        "duration" : 12294
+        "start" : 1735828148498,
+        "stop" : 1735828160878,
+        "duration" : 12380
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC22: Unsuccessful task creation with invalid information.",
-      "uid" : "2b29f368221dc65a",
+      "uid" : "34f58d66ccaa602a",
       "parentUid" : "9c7355fef447bf6b610f79ed1de62b89",
       "status" : "passed",
       "time" : {
-        "start" : 1735822032200,
-        "stop" : 1735822034183,
-        "duration" : 1983
+        "start" : 1735828166320,
+        "stop" : 1735828168246,
+        "duration" : 1926
       },
       "flaky" : false,
       "newFailed" : false,
@@ -306,104 +306,104 @@
     "name" : "Projects Management",
     "children" : [ {
       "name" : "TC23: Successful creation of a new Task List.",
-      "uid" : "23f1db0d2870d1e1",
+      "uid" : "48fe824280f0170",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822042943,
-        "stop" : 1735822052023,
-        "duration" : 9080
+        "start" : 1735828177246,
+        "stop" : 1735828186294,
+        "duration" : 9048
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC24: Successful creation of a new Task Board with sections.",
-      "uid" : "80ebc5cc9cb7298",
+      "uid" : "a27e0ee998972505",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1735822060900,
-        "stop" : 1735822070993,
-        "duration" : 10093
+        "start" : 1735828195498,
+        "stop" : 1735828220410,
+        "duration" : 24912
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC25: Successful change of the Project name and type.",
-      "uid" : "27e157f765dcb7ea",
+      "uid" : "aa665c38660943fe",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822081732,
-        "stop" : 1735822091462,
-        "duration" : 9730
+        "start" : 1735828231380,
+        "stop" : 1735828240872,
+        "duration" : 9492
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC26: Successful deletion of a Project.",
-      "uid" : "2d60c2b34e9ba920",
+      "uid" : "e8903a4629201063",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822103087,
-        "stop" : 1735822113480,
-        "duration" : 10393
+        "start" : 1735828252161,
+        "stop" : 1735828263754,
+        "duration" : 11593
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
-      "uid" : "e466b1331eec2469",
+      "uid" : "90adb1cd7559a5fb",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822122343,
-        "stop" : 1735822130484,
-        "duration" : 8141
+        "start" : 1735828273105,
+        "stop" : 1735828280492,
+        "duration" : 7387
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC28: Successful duplication of a Task List.",
-      "uid" : "1785c2fa077d85c7",
+      "uid" : "d8a49dc17b1d6ce2",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822145290,
-        "stop" : 1735822153907,
-        "duration" : 8617
+        "start" : 1735828295047,
+        "stop" : 1735828303821,
+        "duration" : 8774
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC29: Successful archiving of a Project.",
-      "uid" : "17b4fc1b72fca021",
+      "uid" : "c7659fb226f1eea8",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822165085,
-        "stop" : 1735822178065,
-        "duration" : 12980
+        "start" : 1735828314664,
+        "stop" : 1735828327618,
+        "duration" : 12954
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC30: Successful task moving on Board.",
-      "uid" : "7b34d2e119753915",
+      "uid" : "118d34aa06a56c3",
       "parentUid" : "3ca362a7068675d8d630440fa1415b2d",
       "status" : "passed",
       "time" : {
-        "start" : 1735822189531,
-        "stop" : 1735822200941,
-        "duration" : 11410
+        "start" : 1735828339430,
+        "stop" : 1735828349902,
+        "duration" : 10472
       },
       "flaky" : false,
       "newFailed" : false,
@@ -414,52 +414,52 @@
     "name" : "Task Search",
     "children" : [ {
       "name" : "TC31: Successful search for a task by its name.",
-      "uid" : "cee2cbc5e6f11852",
+      "uid" : "45b98025f2afc85b",
       "parentUid" : "0d80a7bfa443f83b886e4671149af7f7",
       "status" : "passed",
       "time" : {
-        "start" : 1735822209615,
-        "stop" : 1735822216505,
-        "duration" : 6890
+        "start" : 1735828358747,
+        "stop" : 1735828365600,
+        "duration" : 6853
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC32: Successful search for a task by its description.",
-      "uid" : "b0f8d48037d19f5c",
+      "uid" : "9ce12c90a6b96b47",
       "parentUid" : "0d80a7bfa443f83b886e4671149af7f7",
       "status" : "passed",
       "time" : {
-        "start" : 1735822226060,
-        "stop" : 1735822233178,
-        "duration" : 7118
+        "start" : 1735828374150,
+        "stop" : 1735828381313,
+        "duration" : 7163
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC36: Successful search for a task that contains links.",
-      "uid" : "5afd36285d842432",
+      "uid" : "881d748ad9775bfa",
       "parentUid" : "0d80a7bfa443f83b886e4671149af7f7",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1735822299488,
-        "stop" : 1735822309325,
-        "duration" : 9837
+        "start" : 1735828444115,
+        "stop" : 1735828450188,
+        "duration" : 6073
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC37: Successful search for a task with a specific comment.",
-      "uid" : "6077122d7ba3c352",
+      "uid" : "6186697019a8ee1e",
       "parentUid" : "0d80a7bfa443f83b886e4671149af7f7",
       "status" : "passed",
       "time" : {
-        "start" : 1735822318052,
-        "stop" : 1735822327029,
-        "duration" : 8977
+        "start" : 1735828460823,
+        "stop" : 1735828469855,
+        "duration" : 9032
       },
       "flaky" : false,
       "newFailed" : false,
@@ -470,39 +470,39 @@
     "name" : "Task Filtering",
     "children" : [ {
       "name" : "TC33: Successful filtering for a task by its priority.",
-      "uid" : "a36ad2f2c716ffc1",
+      "uid" : "56085d9d686c3ba5",
       "parentUid" : "37e7635cec8975f8e9e71548deb0671e",
       "status" : "passed",
       "time" : {
-        "start" : 1735822242173,
-        "stop" : 1735822250010,
-        "duration" : 7837
+        "start" : 1735828391412,
+        "stop" : 1735828399466,
+        "duration" : 8054
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC34: Successful filtering for a task by its label.",
-      "uid" : "4413bcdaa7e629d8",
+      "uid" : "e6c60f757aebd312",
       "parentUid" : "37e7635cec8975f8e9e71548deb0671e",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1735822250012,
-        "stop" : 1735822250012,
-        "duration" : 0
+        "start" : 1735828408554,
+        "stop" : 1735828417756,
+        "duration" : 9202
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "TC35: Successful filtering for a task by its due date.",
-      "uid" : "4b6e5e843546d1f3",
+      "uid" : "32a460a48ad9dd43",
       "parentUid" : "37e7635cec8975f8e9e71548deb0671e",
       "status" : "passed",
       "time" : {
-        "start" : 1735822283330,
-        "stop" : 1735822293453,
-        "duration" : 10123
+        "start" : 1735828427500,
+        "stop" : 1735828437628,
+        "duration" : 10128
       },
       "flaky" : false,
       "newFailed" : false,
