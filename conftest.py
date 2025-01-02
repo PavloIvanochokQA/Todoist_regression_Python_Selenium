@@ -99,7 +99,6 @@ def create_task(driver):
         home_page.enter_description(task_description)
         home_page.set_task_priority(task_priority)
         home_page.click_submit_add_task_button()
-        home_page.is_task_list_contains_task(task_name)
         return task_name, task_description, task_priority
     except Exception as e:
         take_screenshot(driver, "Task Creation Failed")
