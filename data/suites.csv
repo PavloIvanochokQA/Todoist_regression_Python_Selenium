@@ -1,0 +1,114 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+    This test verifies that a user can successfully search for a task by its description, ensuring that the correct task is displayed in the search results.
+    ","6166","TC32: Successful search for a task by its description.","tests","Fri Dec 27 23:13:45 EET 2024","passed","Fri Dec 27 23:13:51 EET 2024","TestTaskSearch","test_task_search","",""
+"
+    This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.
+    ","7607","TC28: Successful duplication of a Task List.","tests","Fri Dec 27 23:12:07 EET 2024","passed","Fri Dec 27 23:12:14 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a task can be successfully created with all required fields filled.
+    ","12980","TC12: Successful task creation.","tests","Fri Dec 27 23:06:00 EET 2024","passed","Fri Dec 27 23:06:13 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a user can successfully search for a task containing links, ensuring that tasks with URLs are correctly identified and displayed in the search results.
+    ","10361","TC36: Successful search for a task that contains links.","tests","Fri Dec 27 23:15:13 EET 2024","passed","Fri Dec 27 23:15:24 EET 2024","TestTaskSearch","test_task_search","",""
+"
+    This test verifies that a user can successfully login using a Google account, including the authorization process via Google's login page.
+    ","0","TC04: Ability to login using a Google account.","tests","Fri Dec 27 23:03:29 EET 2024","skipped","Fri Dec 27 23:03:29 EET 2024","TestAuthorization","test_authorization","",""
+"
+    This test verifies that a user cannot create a task with invalid information (when the task name is missing).
+    ","3368","TC22: Unsuccessful task creation with invalid information.","tests","Fri Dec 27 23:09:37 EET 2024","passed","Fri Dec 27 23:09:40 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.
+    ","10950","TC18: Successful task creation with a link.","tests","Fri Dec 27 23:08:08 EET 2024","passed","Fri Dec 27 23:08:19 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a user cannot delete their account when providing an incorrect email or password.
+    ","7634","TC11: Inability to delete the account with an incorrect email or password.","tests","Fri Dec 27 23:05:46 EET 2024","passed","Fri Dec 27 23:05:54 EET 2024","TestProfileManagement","test_profile_management","",""
+"
+    This test verifies that a user can successfully filter tasks by their priority, ensuring the filtered tasks match the specified priority and display correctly in the task list.
+    ","5992","TC33: Successful filtering for a task by its priority.","tests","Fri Dec 27 23:14:03 EET 2024","passed","Fri Dec 27 23:14:09 EET 2024","TestTaskFiltering","test_task_filtering","",""
+"
+    This test verifies that a user can successfully logout from an account and is redirected to the login page.
+    ","5380","TC03: Successful logout from an account.","tests","Fri Dec 27 23:03:21 EET 2024","passed","Fri Dec 27 23:03:27 EET 2024","TestAuthorization","test_authorization","",""
+"
+    This test verifies that a user can successfully login to an existing account using valid email and password credentials.
+    ","5680","TC02: Successful login to an existing account with valid information.","tests","Fri Dec 27 23:03:06 EET 2024","passed","Fri Dec 27 23:03:11 EET 2024","TestAuthorization","test_authorization","",""
+"
+    This test verifies that a user can successfully archive a project, confirm its archival in the archived projects section, and restore it back to the active projects section.
+    ","11321","TC29: Successful archiving of a Project.","tests","Fri Dec 27 23:12:33 EET 2024","passed","Fri Dec 27 23:12:45 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a new Task List can be successfully created with a valid name.
+    ","7790","TC23: Successful creation of a new Task List.","tests","Fri Dec 27 23:09:52 EET 2024","passed","Fri Dec 27 23:10:00 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a task can be successfully deleted and is no longer visible in the task list.
+    ","1791","TC17: Successful task deletion.","tests","Fri Dec 27 23:07:55 EET 2024","passed","Fri Dec 27 23:07:57 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a sub-task can be successfully added to an existing task.
+    ","8036","TC14: Successful addition of a sub-task.","tests","Fri Dec 27 23:06:52 EET 2024","passed","Fri Dec 27 23:07:00 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.
+    ","3521","TC08: Unsuccessful registration of a new account with invalid information.","tests","Fri Dec 27 23:04:42 EET 2024","passed","Fri Dec 27 23:04:45 EET 2024","TestRegistration","test_registration","",""
+"
+    This test verifies that a user can successfully delete their account by accessing the account settings and following the deletion process.
+    ","4120","TC07: Successful account deletion.","tests","Fri Dec 27 23:04:30 EET 2024","passed","Fri Dec 27 23:04:34 EET 2024","TestProfileManagement","test_profile_management","",""
+"
+    This test verifies that a user cannot change the current password when providing an incorrect current password.
+    ","9256","TC10: Inability to change the current password with an incorrect password.","tests","Fri Dec 27 23:05:20 EET 2024","passed","Fri Dec 27 23:05:29 EET 2024","TestProfileManagement","test_profile_management","",""
+"
+    This test verifies that a user can successfully search for a task with a specific comment, ensuring that tasks containing the specified comment are correctly identified and displayed in the search results.
+    ","8722","TC37: Successful search for a task with a specific comment.","tests","Fri Dec 27 23:15:39 EET 2024","passed","Fri Dec 27 23:15:48 EET 2024","TestTaskSearch","test_task_search","",""
+"
+    This test verifies that the project name and type can be successfully changed.
+    ","7615","TC25: Successful change of the Project name and type.","tests","Fri Dec 27 23:10:46 EET 2024","passed","Fri Dec 27 23:10:54 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that the due date and time of an existing task can be successfully updated.
+    ","7380","TC15: Successful change of task due date and time.","tests","Fri Dec 27 23:07:15 EET 2024","passed","Fri Dec 27 23:07:22 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a task can be successfully marked as completed and moved to the ""Completed"" section.
+    ","2206","TC16: Successful task completion and marking as completed.","tests","Fri Dec 27 23:07:38 EET 2024","passed","Fri Dec 27 23:07:40 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a user can successfully filter tasks by their label, ensuring the filtered tasks match the specified label and display correctly in the task list.
+    ","7202","TC34: Successful filtering for a task by its label.","tests","Fri Dec 27 23:14:30 EET 2024","passed","Fri Dec 27 23:14:37 EET 2024","TestTaskFiltering","test_task_filtering","",""
+"
+    This test verifies that the system prevents the creation of a new project when invalid information is provided.
+    ","6239","TC27: Unsuccessful creation of a new Project due to invalid information.","tests","Fri Dec 27 23:11:40 EET 2024","passed","Fri Dec 27 23:11:46 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a user can successfully add a label to a task.
+    It ensures that the label is visible in the task's details and can be used to filter tasks.
+    ","5537","TC20: Successful addition of a label to a task.","tests","Fri Dec 27 23:08:57 EET 2024","passed","Fri Dec 27 23:09:02 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a user can successfully delete an existing project.
+    ","8170","TC26: Successful deletion of a Project.","tests","Fri Dec 27 23:11:12 EET 2024","passed","Fri Dec 27 23:11:20 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a user can successfully change their email address and username through the account settings.
+    ","9208","TC06: Successful email and username change.","tests","Fri Dec 27 23:04:04 EET 2024","passed","Fri Dec 27 23:04:13 EET 2024","TestProfileManagement","test_profile_management","",""
+"
+    This test verifies that a user cannot login to an existing account using invalid credentials, such as incorrect email or password.
+    ","4909","TC09: Unsuccessful login to an existing account with invalid information.","tests","Fri Dec 27 23:04:52 EET 2024","passed","Fri Dec 27 23:04:57 EET 2024","TestAuthorization","test_authorization","",""
+"
+    This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.
+    ","8100","TC30: Successful task moving on Board.","tests","Fri Dec 27 23:13:05 EET 2024","passed","Fri Dec 27 23:13:13 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that the name, description, and priority of a task can be successfully updated.
+    ","6956","TC13: Successful change of name, description, and priority for a task.","tests","Fri Dec 27 23:06:29 EET 2024","passed","Fri Dec 27 23:06:36 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a new account can be successfully registered using valid email, password, and username information.
+    ","19045","TC01: Successful registration of a new account with valid information.","tests","Fri Dec 27 23:02:43 EET 2024","passed","Fri Dec 27 23:03:02 EET 2024","TestRegistration","test_registration","",""
+"
+    This test verifies that a user can successfully filter tasks by their due date, ensuring the filtered tasks match the specified date and display correctly in the task list.
+    ","8419","TC35: Successful filtering for a task by its due date.","tests","Fri Dec 27 23:14:54 EET 2024","passed","Fri Dec 27 23:15:03 EET 2024","TestTaskFiltering","test_task_filtering","",""
+"
+    This test verifies that a user can successfully duplicate a task.
+    It ensures that the duplicated task has the same details as the original task and appears in the task list.
+    ","9113","TC21: Successful task duplication.","tests","Fri Dec 27 23:09:18 EET 2024","passed","Fri Dec 27 23:09:27 EET 2024","TestTaskManagement","test_task_management","",""
+"
+    This test verifies that a new Task Board can be successfully created with multiple sections.
+    ","8578","TC24: Successful creation of a new Task Board with sections.","tests","Fri Dec 27 23:10:18 EET 2024","passed","Fri Dec 27 23:10:27 EET 2024","TestProjectsManagement","test_projects_management","",""
+"
+    This test verifies that a user can successfully search for a task by its exact name, ensuring that the correct task is displayed in the search results.
+    ","5708","TC31: Successful search for a task by its name.","tests","Fri Dec 27 23:13:24 EET 2024","passed","Fri Dec 27 23:13:30 EET 2024","TestTaskSearch","test_task_search","",""
+"
+    This test verifies that a user can successfully change their password through the account settings by entering the current password and a new one.
+    ","8216","TC05: Successful password change.","tests","Fri Dec 27 23:03:39 EET 2024","passed","Fri Dec 27 23:03:47 EET 2024","TestProfileManagement","test_profile_management","",""
+"
+    This test verifies that a user can successfully add a comment to a task and that the comment appears in the ""Comments"" section.
+    ","5803","TC19: Successful addition of a comment to a task.","tests","Fri Dec 27 23:08:36 EET 2024","passed","Fri Dec 27 23:08:41 EET 2024","TestTaskManagement","test_task_management","",""
