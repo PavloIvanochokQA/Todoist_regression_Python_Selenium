@@ -3,22 +3,39 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Sure clear about it night traditional.\" not found in the \"Completed\" section.",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: The sub-task with name \"Thus fast organization nature serious task much leg.\" was not found in the sub-task list.",
       "children" : [ {
-        "name" : "TC16: Successful task completion and marking as completed.",
-        "uid" : "b02848b2ace32050",
-        "parentUid" : "b78b909e8edc0319d9a799e32f417db5",
+        "name" : "TC14: Successful addition of a sub-task.",
+        "uid" : "8dc7e2199f8c3b66",
+        "parentUid" : "9f42fc721b36630e76eea7d99a2929d1",
         "status" : "broken",
         "time" : {
-          "start" : 1735832225643,
-          "stop" : 1735832242057,
-          "duration" : 16414
+          "start" : 1735834066916,
+          "stop" : 1735834091008,
+          "duration" : 24092
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b78b909e8edc0319d9a799e32f417db5"
+      "uid" : "9f42fc721b36630e76eea7d99a2929d1"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: 10",
+      "children" : [ {
+        "name" : "TC21: Successful task duplication.",
+        "uid" : "24a38d109cc42752",
+        "parentUid" : "7ef75dbfd36e5e785e4a208c05157f0e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735834184839,
+          "stop" : 1735834218410,
+          "duration" : 33571
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ef75dbfd36e5e785e4a208c05157f0e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
