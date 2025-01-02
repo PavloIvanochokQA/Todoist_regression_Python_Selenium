@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Checkout (copy) gh-pages repository to GitHub runner
+      - name: Checkout gh-pages repository to GitHub runner
         uses: actions/checkout@v3
         with:
           ref: gh-pages
@@ -26,19 +26,29 @@ jobs:
         run: |
           docker compose build
           docker compose up --exit-code-from regression || true
+        id: ui_tests
+
+      - name: Get test status
+        run: |
+          if [ ${{ steps.ui_tests.outcome }} == "success" ]; then
+            echo "status=✅ All tests passed successfully." >> $GITHUB_ENV
+          else
+            echo "status=❌ Some tests failed." >> $GITHUB_ENV
+          fi
 
       - name: Copy history from gh-pages to allure-results
         run: |
-          sudo mkdir -p allure-results/history
-          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
+          mkdir -p allure-results/history
+          cp -R ./.github/gh-pages/history/* allure-results/history/ || echo "No history to copy"
 
       - name: Generate Allure report
         run: |
-          sudo docker compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+          docker compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
 
       - name: Update Allure history
         run: |
-          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
+          mkdir -p ./.github/gh-pages/history
+          cp -R allure-report/history/* ./.github/gh-pages/history/ || echo "No new history"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -48,11 +58,13 @@ jobs:
           folder: allure-report
           clean: true
 
-      - name: Send Report
+      - name: Send Report to Telegram
+        env:
+          STATUS: ${{ env.status }}
         run: |
-          curl --location 'https://api.telegram.org/bot${{ secrets.TG }}/sendMessage' \
-          --header 'Content-Type: application/json' \
-          --data '{
-            "chat_id" : 1302748266, 
-            "text": "Testing finished. Report is here: https://pavloivanochokqa.github.io/Todoist_regression_Python_Selenium/"
-          }'
+          curl --location "https://api.telegram.org/bot${{ secrets.TG }}/sendMessage" \
+          --header "Content-Type: application/json" \
+          --data "{
+            \"chat_id\": 1302748266,
+            \"text\": \"Testing finished. $STATUS Report is here: https://pavloivanochokqa.github.io/Todoist_regression_Python_Selenium/\"
+          }"
