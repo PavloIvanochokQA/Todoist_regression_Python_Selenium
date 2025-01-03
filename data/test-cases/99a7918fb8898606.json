@@ -1,0 +1,807 @@
+{
+  "uid" : "99a7918fb8898606",
+  "name" : "TC28: Successful duplication of a Task List.",
+  "fullName" : "tests.test_projects_management.TestProjectsManagement#test_task_list_duplication",
+  "historyId" : "b8a0706a80ca1b91520870514b341fe2",
+  "time" : {
+    "start" : 1735925773165,
+    "stop" : 1735925781702,
+    "duration" : 8537
+  },
+  "description" : "\n    This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "create_account",
+    "time" : {
+      "start" : 1735925758554,
+      "stop" : 1735925768028,
+      "duration" : 9474
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/signup.",
+      "time" : {
+        "start" : 1735925758556,
+        "stop" : 1735925759331,
+        "duration" : 775
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1735925759331,
+        "stop" : 1735925759485,
+        "duration" : 154
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'petersonjames@example.net'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1735925759485,
+        "stop" : 1735925759580,
+        "duration" : 95
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'J9*LFyzU+8zR'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Sign up with Email\" button.",
+      "time" : {
+        "start" : 1735925759580,
+        "stop" : 1735925759656,
+        "duration" : 76
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter username into the \"Your name\" field.",
+      "time" : {
+        "start" : 1735925759656,
+        "stop" : 1735925765816,
+        "duration" : 6160
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "username",
+        "value" : "'Kimberly'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Continue\" button.",
+      "time" : {
+        "start" : 1735925765817,
+        "stop" : 1735925766251,
+        "duration" : 434
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Select \"Personal\" checkbox.",
+      "time" : {
+        "start" : 1735925766251,
+        "stop" : 1735925766325,
+        "duration" : 74
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Launch Todoist\" button.",
+      "time" : {
+        "start" : 1735925766325,
+        "stop" : 1735925767992,
+        "duration" : 1667
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1735925767992,
+        "stop" : 1735925768028,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 9,
+    "hasContent" : true
+  }, {
+    "name" : "create_task",
+    "time" : {
+      "start" : 1735925770086,
+      "stop" : 1735925773164,
+      "duration" : 3078
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1735925770088,
+        "stop" : 1735925770466,
+        "duration" : 378
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1735925770466,
+        "stop" : 1735925771254,
+        "duration" : 788
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Financial southern president federal by near explain.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter description into the \"Description\" field.",
+      "time" : {
+        "start" : 1735925771255,
+        "stop" : 1735925771858,
+        "duration" : 603
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_description",
+        "value" : "'For a at upon financial middle better. Direction sea range smile individual tell sound. Center indeed suffer instead subject compare.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Set the task's Priority.",
+      "time" : {
+        "start" : 1735925771859,
+        "stop" : 1735925772035,
+        "duration" : 176
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_priority",
+        "value" : "3"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1735925772035,
+        "stop" : 1735925773164,
+        "duration" : 1129
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1735925758501,
+      "stop" : 1735925758554,
+      "duration" : 53
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735925351277,
+      "stop" : 1735925351342,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735925758180,
+      "stop" : 1735925758501,
+      "duration" : 321
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "delete_account",
+    "time" : {
+      "start" : 1735925773165,
+      "stop" : 1735925773165,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "create_task_list",
+    "time" : {
+      "start" : 1735925768029,
+      "stop" : 1735925770085,
+      "duration" : 2056
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"My Projects\" button.",
+      "time" : {
+        "start" : 1735925768032,
+        "stop" : 1735925768226,
+        "duration" : 194
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with a URL starting with https://app.todoist.com/app/project is opened.",
+      "time" : {
+        "start" : 1735925768226,
+        "stop" : 1735925768233,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"My projects menu\" button.",
+      "time" : {
+        "start" : 1735925768233,
+        "stop" : 1735925768369,
+        "duration" : 136
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add project\" button.",
+      "time" : {
+        "start" : 1735925768369,
+        "stop" : 1735925768496,
+        "duration" : 127
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter project name into the \"Name\" field.",
+      "time" : {
+        "start" : 1735925768496,
+        "stop" : 1735925768751,
+        "duration" : 255
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "project_name",
+        "value" : "'YEAH KITCHEN TRAINING'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Choose List as the project type.",
+      "time" : {
+        "start" : 1735925768751,
+        "stop" : 1735925768814,
+        "duration" : 63
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add\" button.",
+      "time" : {
+        "start" : 1735925768814,
+        "stop" : 1735925770085,
+        "duration" : 1271
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 7,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"More actions\" button.",
+      "time" : {
+        "start" : 1735925773165,
+        "stop" : 1735925774325,
+        "duration" : 1160
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Duplicate\" button.",
+      "time" : {
+        "start" : 1735925774325,
+        "stop" : 1735925774482,
+        "duration" : 157
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that a project appears in the My Projects section.",
+      "time" : {
+        "start" : 1735925774482,
+        "stop" : 1735925774497,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "project_name",
+        "value" : "'Copy of YEAH KITCHEN TRAINING'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"My Projects\" button.",
+      "time" : {
+        "start" : 1735925774497,
+        "stop" : 1735925774671,
+        "duration" : 174
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open the project.",
+      "time" : {
+        "start" : 1735925774672,
+        "stop" : 1735925774872,
+        "duration" : 200
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "project_name",
+        "value" : "'Copy of YEAH KITCHEN TRAINING'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the task list contains the task.",
+      "time" : {
+        "start" : 1735925774872,
+        "stop" : 1735925774905,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Financial southern president federal by near explain.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Postconditions: Delete the created account.",
+      "time" : {
+        "start" : 1735925774905,
+        "stop" : 1735925781702,
+        "duration" : 6797
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/settings/account/delete.",
+        "time" : {
+          "start" : 1735925776906,
+          "stop" : 1735925777954,
+          "duration" : 1048
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Enter email into the \"Todoist email\" field.",
+        "time" : {
+          "start" : 1735925779955,
+          "stop" : 1735925780175,
+          "duration" : 220
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "'petersonjames@example.net'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Enter password into the \"Todoist password\" field.",
+        "time" : {
+          "start" : 1735925780175,
+          "stop" : 1735925780302,
+          "duration" : 127
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "'J9*LFyzU+8zR'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Click on the \"Delete account\" button.",
+        "time" : {
+          "start" : 1735925780303,
+          "stop" : 1735925780374,
+          "duration" : 71
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Verify that the page with the URL https://app.todoist.com/auth/account-deleted is opened.",
+        "time" : {
+          "start" : 1735925780374,
+          "stop" : 1735925781702,
+          "duration" : 1328
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 5,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 12,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735925781704,
+      "stop" : 1735925781704,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Projects Management"
+  }, {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(28)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_projects_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProjectsManagement"
+  }, {
+    "name" : "host",
+    "value" : "b167a48e153e"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_projects_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "cfafa16ef4fb13bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912723508,
+          "stop" : 1735912730843,
+          "duration" : 7335
+        }
+      }, {
+        "uid" : "32e70266cfe490ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902564613,
+          "stop" : 1735902571076,
+          "duration" : 6463
+        }
+      }, {
+        "uid" : "29cbfc2174c41b79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735897149077,
+          "stop" : 1735897155654,
+          "duration" : 6577
+        }
+      }, {
+        "uid" : "6d77f7afca7603d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834327846,
+          "stop" : 1735834335176,
+          "duration" : 7330
+        }
+      }, {
+        "uid" : "8f994abc3b2ceb04",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832419834,
+          "stop" : 1735832426469,
+          "duration" : 6635
+        }
+      }, {
+        "uid" : "d8a49dc17b1d6ce2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828295047,
+          "stop" : 1735828303821,
+          "duration" : 8774
+        }
+      }, {
+        "uid" : "1785c2fa077d85c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735822145290,
+          "stop" : 1735822153907,
+          "duration" : 8617
+        }
+      }, {
+        "uid" : "e29f732dc76d3033",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333927371,
+          "stop" : 1735333934978,
+          "duration" : 7607
+        }
+      } ]
+    },
+    "tags" : [ "regression", "order(28)" ]
+  },
+  "source" : "99a7918fb8898606.json",
+  "parameterValues" : [ ]
+}

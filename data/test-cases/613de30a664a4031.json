@@ -1,0 +1,682 @@
+{
+  "uid" : "613de30a664a4031",
+  "name" : "TC15: Successful change of task due date and time.",
+  "fullName" : "tests.test_task_management.TestTaskManagement#test_due_date_and_time_update",
+  "historyId" : "15c28faeca4bd22d04cd7d40eac356e0",
+  "time" : {
+    "start" : 1735925545782,
+    "stop" : 1735925558400,
+    "duration" : 12618
+  },
+  "description" : "\n    This test verifies that the due date and time of an existing task can be successfully updated.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that the due date and time of an existing task can be successfully updated.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1735925538734,
+      "stop" : 1735925538789,
+      "duration" : 55
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "create_task",
+    "time" : {
+      "start" : 1735925542379,
+      "stop" : 1735925545782,
+      "duration" : 3403
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1735925542382,
+        "stop" : 1735925543211,
+        "duration" : 829
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1735925543212,
+        "stop" : 1735925543951,
+        "duration" : 739
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Under word respond challenge ok federal.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter description into the \"Description\" field.",
+      "time" : {
+        "start" : 1735925543951,
+        "stop" : 1735925544485,
+        "duration" : 534
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_description",
+        "value" : "'Not really car impact. Improve year number while or out a. Baby page close daughter in eat.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Set the task's Priority.",
+      "time" : {
+        "start" : 1735925544485,
+        "stop" : 1735925544669,
+        "duration" : 184
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_priority",
+        "value" : "2"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1735925544669,
+        "stop" : 1735925545781,
+        "duration" : 1112
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  }, {
+    "name" : "delete_task",
+    "time" : {
+      "start" : 1735925545782,
+      "stop" : 1735925545782,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735925351277,
+      "stop" : 1735925351342,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735925538405,
+      "stop" : 1735925538734,
+      "duration" : 329
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "login",
+    "time" : {
+      "start" : 1735925538789,
+      "stop" : 1735925542379,
+      "duration" : 3590
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1735925538789,
+        "stop" : 1735925539575,
+        "duration" : 786
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1735925539575,
+        "stop" : 1735925539715,
+        "duration" : 140
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1735925539715,
+        "stop" : 1735925539814,
+        "duration" : 99
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1735925539814,
+        "stop" : 1735925539881,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1735925539881,
+        "stop" : 1735925542379,
+        "duration" : 2498
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that the due date and time of an existing task can be successfully updated.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the task.",
+      "time" : {
+        "start" : 1735925545782,
+        "stop" : 1735925546987,
+        "duration" : 1205
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Under word respond challenge ok federal.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the page with a URL starting with https://app.todoist.com/app/task is opened.",
+      "time" : {
+        "start" : 1735925546987,
+        "stop" : 1735925546990,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Due date\" button.",
+      "time" : {
+        "start" : 1735925546990,
+        "stop" : 1735925547347,
+        "duration" : 357
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Time\" button.",
+      "time" : {
+        "start" : 1735925547347,
+        "stop" : 1735925547479,
+        "duration" : 132
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter the time into the \"Time\" field.",
+      "time" : {
+        "start" : 1735925547479,
+        "stop" : 1735925547765,
+        "duration" : 286
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "value",
+        "value" : "'12:59'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Save\" button.",
+      "time" : {
+        "start" : 1735925547766,
+        "stop" : 1735925548255,
+        "duration" : 489
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Tomorrow\" button.",
+      "time" : {
+        "start" : 1735925548255,
+        "stop" : 1735925548986,
+        "duration" : 731
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the task displays the correct due date and time.",
+      "time" : {
+        "start" : 1735925548986,
+        "stop" : 1735925549013,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "due_date",
+        "value" : "'Tomorrow 12:59'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Due date\" button.",
+      "time" : {
+        "start" : 1735925549013,
+        "stop" : 1735925549329,
+        "duration" : 316
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Today\" button.",
+      "time" : {
+        "start" : 1735925549330,
+        "stop" : 1735925549561,
+        "duration" : 231
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the task displays the correct due date and time.",
+      "time" : {
+        "start" : 1735925549561,
+        "stop" : 1735925549580,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "due_date",
+        "value" : "'Today 12:59'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Postconditions: Delete the created task.",
+      "time" : {
+        "start" : 1735925549580,
+        "stop" : 1735925558400,
+        "duration" : 8820
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1735925551580,
+          "stop" : 1735925552676,
+          "duration" : 1096
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1735925554676,
+          "stop" : 1735925555193,
+          "duration" : 517
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'Under word respond challenge ok federal.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Click on the \"Delete\" button.",
+        "time" : {
+          "start" : 1735925557194,
+          "stop" : 1735925557305,
+          "duration" : 111
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Confirm the deletion.",
+        "time" : {
+          "start" : 1735925557305,
+          "stop" : 1735925558400,
+          "duration" : 1095
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 16,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735925558402,
+      "stop" : 1735925558402,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Task Management"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(15)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_task_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTaskManagement"
+  }, {
+    "name" : "host",
+    "value" : "b167a48e153e"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_task_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "d5a9f10952b1d64c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912502434,
+          "stop" : 1735912511981,
+          "duration" : 9547
+        }
+      }, {
+        "uid" : "27287a10f361d08a",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
+        "time" : {
+          "start" : 1735902361105,
+          "stop" : 1735902366797,
+          "duration" : 5692
+        }
+      }, {
+        "uid" : "b9e46a8bd8770362",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735896957028,
+          "stop" : 1735896966145,
+          "duration" : 9117
+        }
+      }, {
+        "uid" : "cc5b2fdfae23a97a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834098852,
+          "stop" : 1735834108500,
+          "duration" : 9648
+        }
+      }, {
+        "uid" : "b0374ee733f0e116",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832208377,
+          "stop" : 1735832217786,
+          "duration" : 9409
+        }
+      }, {
+        "uid" : "4cec08e4e3555ace",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828059533,
+          "stop" : 1735828068702,
+          "duration" : 9169
+        }
+      }, {
+        "uid" : "638fe5e0ad72694d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735821922519,
+          "stop" : 1735821931988,
+          "duration" : 9469
+        }
+      }, {
+        "uid" : "665236dfab092b1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333635337,
+          "stop" : 1735333642717,
+          "duration" : 7380
+        }
+      } ]
+    },
+    "tags" : [ "regression", "order(15)" ]
+  },
+  "source" : "613de30a664a4031.json",
+  "parameterValues" : [ ]
+}

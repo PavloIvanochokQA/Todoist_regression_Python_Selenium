@@ -3,69 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Land everybody skin clearly remember suddenly stand.\" not found in the \"Completed\" section.",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: 10",
       "children" : [ {
-        "name" : "TC16: Successful task completion and marking as completed.",
-        "uid" : "a5b926def2a47c11",
-        "parentUid" : "777f24cefc8f56748c1f0fc47e23afb5",
+        "name" : "TC37: Successful search for a task with a specific comment.",
+        "uid" : "2173c124b313a579",
+        "parentUid" : "7ef75dbfd36e5e785e4a208c05157f0e",
         "status" : "broken",
         "time" : {
-          "start" : 1735912520837,
-          "stop" : 1735912537269,
-          "duration" : 16432
+          "start" : 1735925949981,
+          "stop" : 1735925985523,
+          "duration" : 35542
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "777f24cefc8f56748c1f0fc47e23afb5"
-    }, {
-      "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
-      "children" : [ {
-        "name" : "TC20: Successful addition of a label to a task.",
-        "uid" : "aee054c5ed86dc1c",
-        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735912589568,
-          "stop" : 1735912593485,
-          "duration" : 3917
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
-        "uid" : "8612ab51a8a89dfc",
-        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735912706308,
-          "stop" : 1735912709160,
-          "duration" : 2852
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
-    }, {
-      "name" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
-      "children" : [ {
-        "name" : "TC30: Successful task moving on Board.",
-        "uid" : "5f3e6ec7a53dd4be",
-        "parentUid" : "d39bf102e1e5bf5134ee723b8fd3f516",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735912757219,
-          "stop" : 1735912757219,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d39bf102e1e5bf5134ee723b8fd3f516"
+      "uid" : "7ef75dbfd36e5e785e4a208c05157f0e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

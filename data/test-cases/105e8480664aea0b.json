@@ -1,0 +1,866 @@
+{
+  "uid" : "105e8480664aea0b",
+  "name" : "TC30: Successful task moving on Board.",
+  "fullName" : "tests.test_projects_management.TestProjectsManagement#test_task_moving_on_board",
+  "historyId" : "cb80d095aa0d0b1b466ba7a23be24512",
+  "time" : {
+    "start" : 1735925816056,
+    "stop" : 1735925828371,
+    "duration" : 12315
+  },
+  "description" : "\n    This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "create_account",
+    "time" : {
+      "start" : 1735925805927,
+      "stop" : 1735925813357,
+      "duration" : 7430
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/signup.",
+      "time" : {
+        "start" : 1735925805929,
+        "stop" : 1735925806772,
+        "duration" : 843
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1735925806772,
+        "stop" : 1735925806915,
+        "duration" : 143
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'rhodesaaron@example.org'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1735925806915,
+        "stop" : 1735925807012,
+        "duration" : 97
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'Z7e)t!+i19jW'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Sign up with Email\" button.",
+      "time" : {
+        "start" : 1735925807012,
+        "stop" : 1735925807083,
+        "duration" : 71
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter username into the \"Your name\" field.",
+      "time" : {
+        "start" : 1735925807083,
+        "stop" : 1735925811140,
+        "duration" : 4057
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "username",
+        "value" : "'Adam'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Continue\" button.",
+      "time" : {
+        "start" : 1735925811140,
+        "stop" : 1735925811619,
+        "duration" : 479
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Select \"Personal\" checkbox.",
+      "time" : {
+        "start" : 1735925811619,
+        "stop" : 1735925811689,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Launch Todoist\" button.",
+      "time" : {
+        "start" : 1735925811689,
+        "stop" : 1735925813315,
+        "duration" : 1626
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1735925813315,
+        "stop" : 1735925813357,
+        "duration" : 42
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 9,
+    "hasContent" : true
+  }, {
+    "name" : "create_task_board",
+    "time" : {
+      "start" : 1735925813357,
+      "stop" : 1735925816056,
+      "duration" : 2699
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"My Projects\" button.",
+      "time" : {
+        "start" : 1735925813360,
+        "stop" : 1735925813552,
+        "duration" : 192
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"My projects menu\" button.",
+      "time" : {
+        "start" : 1735925813552,
+        "stop" : 1735925813691,
+        "duration" : 139
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add project\" button.",
+      "time" : {
+        "start" : 1735925813691,
+        "stop" : 1735925813805,
+        "duration" : 114
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter project name into the \"Name\" field.",
+      "time" : {
+        "start" : 1735925813806,
+        "stop" : 1735925814064,
+        "duration" : 258
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "project_name",
+        "value" : "'OFFICIAL ABLE PRODUCT'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Choose Board as the project type.",
+      "time" : {
+        "start" : 1735925814064,
+        "stop" : 1735925814137,
+        "duration" : 73
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add\" button.",
+      "time" : {
+        "start" : 1735925814137,
+        "stop" : 1735925815375,
+        "duration" : 1238
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter Board section name.",
+      "time" : {
+        "start" : 1735925815375,
+        "stop" : 1735925815453,
+        "duration" : 78
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section_name",
+        "value" : "'To Do'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the confirm \"Add section\" button.",
+      "time" : {
+        "start" : 1735925815453,
+        "stop" : 1735925815547,
+        "duration" : 94
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add section\" button.",
+      "time" : {
+        "start" : 1735925815547,
+        "stop" : 1735925815617,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter Board section name.",
+      "time" : {
+        "start" : 1735925815617,
+        "stop" : 1735925815700,
+        "duration" : 83
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section_name",
+        "value" : "'In Progress'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the confirm \"Add section\" button.",
+      "time" : {
+        "start" : 1735925815700,
+        "stop" : 1735925815806,
+        "duration" : 106
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Add section\" button.",
+      "time" : {
+        "start" : 1735925815806,
+        "stop" : 1735925815879,
+        "duration" : 73
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter Board section name.",
+      "time" : {
+        "start" : 1735925815879,
+        "stop" : 1735925815949,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section_name",
+        "value" : "'Done'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the confirm \"Add section\" button.",
+      "time" : {
+        "start" : 1735925815949,
+        "stop" : 1735925816055,
+        "duration" : 106
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 14,
+    "hasContent" : true
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1735925805874,
+      "stop" : 1735925805927,
+      "duration" : 53
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735925805546,
+      "stop" : 1735925805874,
+      "duration" : 328
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735925351277,
+      "stop" : 1735925351342,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "delete_account",
+    "time" : {
+      "start" : 1735925816056,
+      "stop" : 1735925816056,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Create a task in the section.",
+      "time" : {
+        "start" : 1735925816058,
+        "stop" : 1735925817148,
+        "duration" : 1090
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section",
+        "value" : "'To Do'"
+      }, {
+        "name" : "task_name",
+        "value" : "'Bank question experience.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"More actions\" button on the task.",
+      "time" : {
+        "start" : 1735925817148,
+        "stop" : 1735925817691,
+        "duration" : 543
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Bank question experience.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Move task to section.",
+      "time" : {
+        "start" : 1735925817692,
+        "stop" : 1735925818090,
+        "duration" : 398
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section_name",
+        "value" : "'In Progress'"
+      }, {
+        "name" : "project_name",
+        "value" : "'OFFICIAL ABLE PRODUCT'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the task appears in the section.",
+      "time" : {
+        "start" : 1735925818090,
+        "stop" : 1735925818133,
+        "duration" : 43
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Bank question experience.'"
+      }, {
+        "name" : "section_name",
+        "value" : "'In Progress'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"More actions\" button on the task.",
+      "time" : {
+        "start" : 1735925818133,
+        "stop" : 1735925818610,
+        "duration" : 477
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Bank question experience.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Move task to section.",
+      "time" : {
+        "start" : 1735925818610,
+        "stop" : 1735925818933,
+        "duration" : 323
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "section_name",
+        "value" : "'Done'"
+      }, {
+        "name" : "project_name",
+        "value" : "'OFFICIAL ABLE PRODUCT'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the task appears in the section.",
+      "time" : {
+        "start" : 1735925818934,
+        "stop" : 1735925818952,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Bank question experience.'"
+      }, {
+        "name" : "section_name",
+        "value" : "'Done'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Postconditions: Delete the created account.",
+      "time" : {
+        "start" : 1735925818953,
+        "stop" : 1735925828371,
+        "duration" : 9418
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/settings/account/delete.",
+        "time" : {
+          "start" : 1735925820953,
+          "stop" : 1735925821642,
+          "duration" : 689
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Enter email into the \"Todoist email\" field.",
+        "time" : {
+          "start" : 1735925823642,
+          "stop" : 1735925823852,
+          "duration" : 210
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "'rhodesaaron@example.org'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Enter password into the \"Todoist password\" field.",
+        "time" : {
+          "start" : 1735925823852,
+          "stop" : 1735925823976,
+          "duration" : 124
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "'Z7e)t!+i19jW'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Click on the \"Delete account\" button.",
+        "time" : {
+          "start" : 1735925823976,
+          "stop" : 1735925824046,
+          "duration" : 70
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Verify that the page with the URL https://app.todoist.com/auth/account-deleted is opened.",
+        "time" : {
+          "start" : 1735925824046,
+          "stop" : 1735925828371,
+          "duration" : 4325
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 5,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 13,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735925828373,
+      "stop" : 1735925828373,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Projects Management"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(30)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_projects_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProjectsManagement"
+  }, {
+    "name" : "host",
+    "value" : "b167a48e153e"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_projects_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "5f3e6ec7a53dd4be",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1735912757219,
+          "stop" : 1735912757219,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "6c20a8f3c443affa",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+        "time" : {
+          "start" : 1735902602844,
+          "stop" : 1735902625730,
+          "duration" : 22886
+        }
+      }, {
+        "uid" : "8b846ea1082f1b4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735897186386,
+          "stop" : 1735897194265,
+          "duration" : 7879
+        }
+      }, {
+        "uid" : "6a5b2141dfa1c101",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834368400,
+          "stop" : 1735834377300,
+          "duration" : 8900
+        }
+      }, {
+        "uid" : "b1878c6b5bd92203",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832457425,
+          "stop" : 1735832465684,
+          "duration" : 8259
+        }
+      }, {
+        "uid" : "118d34aa06a56c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828339430,
+          "stop" : 1735828349902,
+          "duration" : 10472
+        }
+      }, {
+        "uid" : "7b34d2e119753915",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735822189531,
+          "stop" : 1735822200941,
+          "duration" : 11410
+        }
+      }, {
+        "uid" : "38aa4f1d3f79246f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333985346,
+          "stop" : 1735333993446,
+          "duration" : 8100
+        }
+      } ]
+    },
+    "tags" : [ "regression", "order(30)" ]
+  },
+  "source" : "105e8480664aea0b.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,619 @@
+{
+  "uid" : "671317f51851146c",
+  "name" : "TC21: Successful task duplication.",
+  "fullName" : "tests.test_task_management.TestTaskManagement#test_task_duplication",
+  "historyId" : "12e7a7f6b4e3722be0676de67fcfc621",
+  "time" : {
+    "start" : 1735925641824,
+    "stop" : 1735925660114,
+    "duration" : 18290
+  },
+  "description" : "\n    This test verifies that a user can successfully duplicate a task.\n    It ensures that the duplicated task has the same details as the original task and appears in the task list.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully duplicate a task.\nIt ensures that the duplicated task has the same details as the original task and appears in the task list.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1735925634656,
+      "stop" : 1735925634709,
+      "duration" : 53
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "login",
+    "time" : {
+      "start" : 1735925634709,
+      "stop" : 1735925638383,
+      "duration" : 3674
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1735925634709,
+        "stop" : 1735925635259,
+        "duration" : 550
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1735925635260,
+        "stop" : 1735925635578,
+        "duration" : 318
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1735925635579,
+        "stop" : 1735925635686,
+        "duration" : 107
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1735925635686,
+        "stop" : 1735925635761,
+        "duration" : 75
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1735925635761,
+        "stop" : 1735925638383,
+        "duration" : 2622
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735925351277,
+      "stop" : 1735925351342,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735925634333,
+      "stop" : 1735925634656,
+      "duration" : 323
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "delete_task",
+    "time" : {
+      "start" : 1735925641824,
+      "stop" : 1735925641824,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "create_task",
+    "time" : {
+      "start" : 1735925638383,
+      "stop" : 1735925641824,
+      "duration" : 3441
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1735925638386,
+        "stop" : 1735925639264,
+        "duration" : 878
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1735925639264,
+        "stop" : 1735925639944,
+        "duration" : 680
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Cover shake history north discover.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter description into the \"Description\" field.",
+      "time" : {
+        "start" : 1735925639944,
+        "stop" : 1735925640500,
+        "duration" : 556
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_description",
+        "value" : "'Leader nearly number sure. Material inside sport current. Site citizen tree condition impact baby.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Set the task's Priority.",
+      "time" : {
+        "start" : 1735925640500,
+        "stop" : 1735925640698,
+        "duration" : 198
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_priority",
+        "value" : "2"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1735925640699,
+        "stop" : 1735925641824,
+        "duration" : 1125
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully duplicate a task.\n    It ensures that the duplicated task has the same details as the original task and appears in the task list.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"More actions\" button on the task.",
+      "time" : {
+        "start" : 1735925641824,
+        "stop" : 1735925642305,
+        "duration" : 481
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Cover shake history north discover.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Duplicate\" button.",
+      "time" : {
+        "start" : 1735925642305,
+        "stop" : 1735925642505,
+        "duration" : 200
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that a duplicate of the task appears in the task list.",
+      "time" : {
+        "start" : 1735925642505,
+        "stop" : 1735925642526,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Cover shake history north discover.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Postconditions: Delete the created task and its duplicate.",
+      "time" : {
+        "start" : 1735925642526,
+        "stop" : 1735925660114,
+        "duration" : 17588
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1735925644526,
+          "stop" : 1735925645690,
+          "duration" : 1164
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1735925647690,
+          "stop" : 1735925648187,
+          "duration" : 497
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'Cover shake history north discover.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Click on the \"Delete\" button.",
+        "time" : {
+          "start" : 1735925650188,
+          "stop" : 1735925650305,
+          "duration" : 117
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Confirm the deletion.",
+        "time" : {
+          "start" : 1735925650305,
+          "stop" : 1735925651406,
+          "duration" : 1101
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1735925653406,
+          "stop" : 1735925654443,
+          "duration" : 1037
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1735925656443,
+          "stop" : 1735925656924,
+          "duration" : 481
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'Cover shake history north discover.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Click on the \"Delete\" button.",
+        "time" : {
+          "start" : 1735925658924,
+          "stop" : 1735925659023,
+          "duration" : 99
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Confirm the deletion.",
+        "time" : {
+          "start" : 1735925659023,
+          "stop" : 1735925660114,
+          "duration" : 1091
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 8,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 12,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735925660115,
+      "stop" : 1735925660115,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Task Management"
+  }, {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(21)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_task_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTaskManagement"
+  }, {
+    "name" : "host",
+    "value" : "b167a48e153e"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_task_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "b7d4a104ba189891",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912602127,
+          "stop" : 1735912614561,
+          "duration" : 12434
+        }
+      }, {
+        "uid" : "94f6d4a5645768fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902452848,
+          "stop" : 1735902465080,
+          "duration" : 12232
+        }
+      }, {
+        "uid" : "41771c89290e9aef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735897038553,
+          "stop" : 1735897050540,
+          "duration" : 11987
+        }
+      }, {
+        "uid" : "24a38d109cc42752",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: 10",
+        "time" : {
+          "start" : 1735834184839,
+          "stop" : 1735834218410,
+          "duration" : 33571
+        }
+      }, {
+        "uid" : "7dd2a92b1d64aab5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832305941,
+          "stop" : 1735832318311,
+          "duration" : 12370
+        }
+      }, {
+        "uid" : "90729b58e2bc66d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828148498,
+          "stop" : 1735828160878,
+          "duration" : 12380
+        }
+      }, {
+        "uid" : "99239a2dd0ffb329",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735822014487,
+          "stop" : 1735822026781,
+          "duration" : 12294
+        }
+      }, {
+        "uid" : "1dcbd5cb13d7a040",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333758148,
+          "stop" : 1735333767261,
+          "duration" : 9113
+        }
+      } ]
+    },
+    "tags" : [ "order(21)", "regression" ]
+  },
+  "source" : "671317f51851146c.json",
+  "parameterValues" : [ ]
+}
