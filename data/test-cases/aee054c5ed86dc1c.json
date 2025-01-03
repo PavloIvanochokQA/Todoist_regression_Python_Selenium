@@ -1,0 +1,604 @@
+{
+  "uid" : "aee054c5ed86dc1c",
+  "name" : "TC20: Successful addition of a label to a task.",
+  "fullName" : "tests.test_task_management.TestTaskManagement#test_add_label",
+  "historyId" : "5126e52e20d5e25d538394004d537816",
+  "time" : {
+    "start" : 1735912589568,
+    "stop" : 1735912593485,
+    "duration" : 3917
+  },
+  "description" : "\n    This test verifies that a user can successfully add a label to a task.\n    It ensures that the label is visible in the task's details and can be used to filter tasks.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully add a label to a task.\nIt ensures that the label is visible in the task's details and can be used to filter tasks.\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
+  "statusTrace" : "self = <test_task_management.TestTaskManagement object at 0x7f36d8a07e10>\nlogin = None\ncreate_task = ('Vote season court wait.', 'Dinner identify foot. Day house myself concern guess buy. Other pass free interesting.', 2)\ndelete_task = <function delete_task.<locals>.delete at 0x7f36dacd6480>\n\n    @pytest.mark.order(20)\n    @pytest.mark.regression\n    @allure.feature(\"Task Management\")\n    @allure.description(\"\"\"\n    This test verifies that a user can successfully add a label to a task.\n    It ensures that the label is visible in the task's details and can be used to filter tasks.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC20: Successful addition of a label to a task.\")\n    def test_add_label(self, login, create_task, delete_task):\n        task_name, task_description, task_priority = create_task\n        labels = [\"Education\", \"Sport\", \"Personal\", \"Work\", \"Hobby\"]\n        label = random.choice(labels)\n        try:\n            # Steps:\n            self.home_page.open_task(task_name)\n            self.task_page.is_opened()\n            self.task_page.click_labels_button()\n            self.task_page.set_label(label)\n            self.task_page.click_on_label(label)\n            self.home_page.is_page_heading_contains_label(label)\n            self.home_page.is_task_list_contains_task(task_name)\n        except Exception as e:\n            take_screenshot(self.driver, \"Add Label Test Failed\")\n            raise e\n        finally:\n            # Postconditions:\n            with allure.step(\"Postconditions: Delete the created task.\"):\n>               delete_task(task_name)\n\ntests/test_task_management.py:274: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nconftest.py:123: in delete\n    raise e\nconftest.py:117: in delete\n    home_page.click_more_actions_button(task_name)\npages/home_page.py:125: in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\nbase/base_page.py:29: in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n../local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py:156: in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:766: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:380: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f36d89b7cd0>\nresponse = {'status': 500, 'value': '{\"value\":{\"data\":{\"text\":\"{Alert text : \"},\"error\":\"unexpected alert open\",\"message\":\"unexpected alert open: {Alert text : }\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n>           raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\nE           selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nE           Message: unexpected alert open: {Alert text : }\nE             (Session info: headless chrome=112.0.5615.165)\n\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:228: UnexpectedAlertPresentException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1735912581443,
+      "stop" : 1735912586225,
+      "duration" : 4782
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1735912581443,
+        "stop" : 1735912581978,
+        "duration" : 535
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1735912581979,
+        "stop" : 1735912583113,
+        "duration" : 1134
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1735912583113,
+        "stop" : 1735912583208,
+        "duration" : 95
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1735912583209,
+        "stop" : 1735912583286,
+        "duration" : 77
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1735912583286,
+        "stop" : 1735912586225,
+        "duration" : 2939
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735912581060,
+      "stop" : 1735912581390,
+      "duration" : 330
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1735912581390,
+      "stop" : 1735912581442,
+      "duration" : 52
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "create_task",
+    "time" : {
+      "start" : 1735912586225,
+      "stop" : 1735912589568,
+      "duration" : 3343
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1735912586228,
+        "stop" : 1735912587151,
+        "duration" : 923
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1735912587151,
+        "stop" : 1735912587730,
+        "duration" : 579
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Vote season court wait.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter description into the \"Description\" field.",
+      "time" : {
+        "start" : 1735912587730,
+        "stop" : 1735912588244,
+        "duration" : 514
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_description",
+        "value" : "'Dinner identify foot. Day house myself concern guess buy. Other pass free interesting.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Set the task's Priority.",
+      "time" : {
+        "start" : 1735912588245,
+        "stop" : 1735912588414,
+        "duration" : 169
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_priority",
+        "value" : "2"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1735912588414,
+        "stop" : 1735912589567,
+        "duration" : 1153
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735912313193,
+      "stop" : 1735912313257,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "delete_task",
+    "time" : {
+      "start" : 1735912589568,
+      "stop" : 1735912589568,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully add a label to a task.\n    It ensures that the label is visible in the task's details and can be used to filter tasks.\n    ",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
+    "statusTrace" : "self = <test_task_management.TestTaskManagement object at 0x7f36d8a07e10>\nlogin = None\ncreate_task = ('Vote season court wait.', 'Dinner identify foot. Day house myself concern guess buy. Other pass free interesting.', 2)\ndelete_task = <function delete_task.<locals>.delete at 0x7f36dacd6480>\n\n    @pytest.mark.order(20)\n    @pytest.mark.regression\n    @allure.feature(\"Task Management\")\n    @allure.description(\"\"\"\n    This test verifies that a user can successfully add a label to a task.\n    It ensures that the label is visible in the task's details and can be used to filter tasks.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC20: Successful addition of a label to a task.\")\n    def test_add_label(self, login, create_task, delete_task):\n        task_name, task_description, task_priority = create_task\n        labels = [\"Education\", \"Sport\", \"Personal\", \"Work\", \"Hobby\"]\n        label = random.choice(labels)\n        try:\n            # Steps:\n            self.home_page.open_task(task_name)\n            self.task_page.is_opened()\n            self.task_page.click_labels_button()\n            self.task_page.set_label(label)\n            self.task_page.click_on_label(label)\n            self.home_page.is_page_heading_contains_label(label)\n            self.home_page.is_task_list_contains_task(task_name)\n        except Exception as e:\n            take_screenshot(self.driver, \"Add Label Test Failed\")\n            raise e\n        finally:\n            # Postconditions:\n            with allure.step(\"Postconditions: Delete the created task.\"):\n>               delete_task(task_name)\n\ntests/test_task_management.py:274: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nconftest.py:123: in delete\n    raise e\nconftest.py:117: in delete\n    home_page.click_more_actions_button(task_name)\npages/home_page.py:125: in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\nbase/base_page.py:29: in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n../local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py:156: in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:766: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:380: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f36d89b7cd0>\nresponse = {'status': 500, 'value': '{\"value\":{\"data\":{\"text\":\"{Alert text : \"},\"error\":\"unexpected alert open\",\"message\":\"unexpected alert open: {Alert text : }\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n>           raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\nE           selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nE           Message: unexpected alert open: {Alert text : }\nE             (Session info: headless chrome=112.0.5615.165)\n\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:228: UnexpectedAlertPresentException",
+    "steps" : [ {
+      "name" : "Open the task.",
+      "time" : {
+        "start" : 1735912589568,
+        "stop" : 1735912590777,
+        "duration" : 1209
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Vote season court wait.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the page with a URL starting with https://app.todoist.com/app/task is opened.",
+      "time" : {
+        "start" : 1735912590777,
+        "stop" : 1735912590780,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the \"Labels\" button.",
+      "time" : {
+        "start" : 1735912590780,
+        "stop" : 1735912590850,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Set a label.",
+      "time" : {
+        "start" : 1735912590850,
+        "stop" : 1735912591070,
+        "duration" : 220
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "label",
+        "value" : "'Personal'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click on the added label.",
+      "time" : {
+        "start" : 1735912591070,
+        "stop" : 1735912591259,
+        "duration" : 189
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "label",
+        "value" : "'Personal'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the page heading contains label.",
+      "time" : {
+        "start" : 1735912591259,
+        "stop" : 1735912591285,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "label",
+        "value" : "'Personal'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Verify that the task list contains the task.",
+      "time" : {
+        "start" : 1735912591285,
+        "stop" : 1735912591297,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Vote season court wait.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Postconditions: Delete the created task.",
+      "time" : {
+        "start" : 1735912591297,
+        "stop" : 1735912593484,
+        "duration" : 2187
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)\n\n",
+      "statusTrace" : "  File \"/usr/workspace/tests/test_task_management.py\", line 274, in test_add_label\n    delete_task(task_name)\n  File \"/usr/workspace/conftest.py\", line 123, in delete\n    raise e\n  File \"/usr/workspace/conftest.py\", line 117, in delete\n    home_page.click_more_actions_button(task_name)\n  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/home_page.py\", line 125, in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/workspace/base/base_page.py\", line 29, in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py\", line 156, in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 766, in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 380, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 228, in check_response\n    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1735912592297,
+          "stop" : 1735912592301,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1735912593301,
+          "stop" : 1735912593304,
+          "duration" : 3
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)\n\n",
+        "statusTrace" : "  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/home_page.py\", line 125, in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/workspace/base/base_page.py\", line 29, in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/expected_conditions.py\", line 156, in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 766, in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 380, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 228, in check_response\n    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'Vote season court wait.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "20283b674b5f7c36",
+        "name" : "Task Deletion Failed",
+        "source" : "20283b674b5f7c36.png",
+        "type" : "image/png",
+        "size" : 68505
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 10,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735912593522,
+      "stop" : 1735912593522,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Task Management"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(20)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_task_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTaskManagement"
+  }, {
+    "name" : "host",
+    "value" : "59bbcb9ba4ef"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_task_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "7fe258199a8b798d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902437862,
+          "stop" : 1735902445385,
+          "duration" : 7523
+        }
+      }, {
+        "uid" : "ee4b6f8a92801b2a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735897023002,
+          "stop" : 1735897030485,
+          "duration" : 7483
+        }
+      }, {
+        "uid" : "a652ccff83d4a52b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834167284,
+          "stop" : 1735834174938,
+          "duration" : 7654
+        }
+      }, {
+        "uid" : "5f248aff7df13250",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832290171,
+          "stop" : 1735832297750,
+          "duration" : 7579
+        }
+      }, {
+        "uid" : "48d0c2d364916f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828131326,
+          "stop" : 1735828139030,
+          "duration" : 7704
+        }
+      }, {
+        "uid" : "bff44a9c5688aa94",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735821997961,
+          "stop" : 1735822005644,
+          "duration" : 7683
+        }
+      }, {
+        "uid" : "9886987e3c295c31",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333737082,
+          "stop" : 1735333742619,
+          "duration" : 5537
+        }
+      } ]
+    },
+    "tags" : [ "order(20)", "regression" ]
+  },
+  "source" : "aee054c5ed86dc1c.json",
+  "parameterValues" : [ ]
+}

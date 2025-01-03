@@ -3,29 +3,46 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Land everybody skin clearly remember suddenly stand.\" not found in the \"Completed\" section.",
+      "children" : [ {
+        "name" : "TC16: Successful task completion and marking as completed.",
+        "uid" : "a5b926def2a47c11",
+        "parentUid" : "777f24cefc8f56748c1f0fc47e23afb5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735912520837,
+          "stop" : 1735912537269,
+          "duration" : 16432
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "777f24cefc8f56748c1f0fc47e23afb5"
+    }, {
       "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
       "children" : [ {
-        "name" : "TC15: Successful change of task due date and time.",
-        "uid" : "27287a10f361d08a",
+        "name" : "TC20: Successful addition of a label to a task.",
+        "uid" : "aee054c5ed86dc1c",
         "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
         "status" : "broken",
         "time" : {
-          "start" : 1735902361105,
-          "stop" : 1735902366797,
-          "duration" : 5692
+          "start" : 1735912589568,
+          "stop" : 1735912593485,
+          "duration" : 3917
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "TC23: Successful creation of a new Task List.",
-        "uid" : "b4dd2ee462ef8d06",
+        "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
+        "uid" : "8612ab51a8a89dfc",
         "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
         "status" : "broken",
         "time" : {
-          "start" : 1735902480185,
-          "stop" : 1735902484627,
-          "duration" : 4442
+          "start" : 1735912706308,
+          "stop" : 1735912709160,
+          "duration" : 2852
         },
         "flaky" : false,
         "newFailed" : false,
@@ -33,39 +50,22 @@
       } ],
       "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Father poor cold create take sit personal.\" not found in the \"Completed\" section.",
-      "children" : [ {
-        "name" : "TC16: Successful task completion and marking as completed.",
-        "uid" : "60fbb1770875e43d",
-        "parentUid" : "b599a875fb6dcfa027f8c91a41c2b68f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1735902374341,
-          "stop" : 1735902390774,
-          "duration" : 16433
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "b599a875fb6dcfa027f8c91a41c2b68f"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "name" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
       "children" : [ {
         "name" : "TC30: Successful task moving on Board.",
-        "uid" : "6c20a8f3c443affa",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "uid" : "5f3e6ec7a53dd4be",
+        "parentUid" : "d39bf102e1e5bf5134ee723b8fd3f516",
         "status" : "broken",
         "time" : {
-          "start" : 1735902602844,
-          "stop" : 1735902625730,
-          "duration" : 22886
+          "start" : 1735912757219,
+          "stop" : 1735912757219,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+      "uid" : "d39bf102e1e5bf5134ee723b8fd3f516"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
