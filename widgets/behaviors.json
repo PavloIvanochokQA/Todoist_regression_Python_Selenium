@@ -1,26 +1,26 @@
 {
   "total" : 7,
   "items" : [ {
-    "uid" : "9c7355fef447bf6b610f79ed1de62b89",
-    "name" : "Task Management",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 2,
-      "skipped" : 0,
-      "passed" : 9,
-      "unknown" : 0,
-      "total" : 11
-    }
-  }, {
     "uid" : "3ca362a7068675d8d630440fa1415b2d",
     "name" : "Projects Management",
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 7,
       "unknown" : 0,
       "total" : 8
+    }
+  }, {
+    "uid" : "9c7355fef447bf6b610f79ed1de62b89",
+    "name" : "Task Management",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 11,
+      "unknown" : 0,
+      "total" : 11
     }
   }, {
     "uid" : "30c111bc5a23010a41f823677e52d06b",

@@ -1,370 +1,370 @@
 [ {
-  "uid" : "6a5b2141dfa1c101",
-  "name" : "TC30: Successful task moving on Board.",
+  "uid" : "29cbfc2174c41b79",
+  "name" : "TC28: Successful duplication of a Task List.",
   "time" : {
-    "start" : 1735834368400,
-    "stop" : 1735834377300,
-    "duration" : 8900
+    "start" : 1735897149077,
+    "stop" : 1735897155654,
+    "duration" : 6577
   },
   "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ddc7a7240078814",
-  "name" : "TC11: Inability to delete the account with an incorrect email or password.",
-  "time" : {
-    "start" : 1735834013482,
-    "stop" : 1735834024480,
-    "duration" : 10998
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "72abba5219cec972",
-  "name" : "TC12: Successful task creation.",
-  "time" : {
-    "start" : 1735834028428,
-    "stop" : 1735834039230,
-    "duration" : 10802
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "657fb1fb6ee39e35",
-  "name" : "TC18: Successful task creation with a link.",
-  "time" : {
-    "start" : 1735834131579,
-    "stop" : 1735834142040,
-    "duration" : 10461
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "503fefba6cc03bfc",
-  "name" : "TC31: Successful search for a task by its name.",
-  "time" : {
-    "start" : 1735834385414,
-    "stop" : 1735834391838,
-    "duration" : 6424
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "24a38d109cc42752",
-  "name" : "TC21: Successful task duplication.",
-  "time" : {
-    "start" : 1735834184839,
-    "stop" : 1735834218410,
-    "duration" : 33571
-  },
-  "status" : "broken",
   "severity" : "minor"
 }, {
-  "uid" : "cc5b2fdfae23a97a",
-  "name" : "TC15: Successful change of task due date and time.",
+  "uid" : "648c48a5422ad2b1",
+  "name" : "TC32: Successful search for a task by its description.",
   "time" : {
-    "start" : 1735834098852,
-    "stop" : 1735834108500,
-    "duration" : 9648
+    "start" : 1735897218634,
+    "stop" : 1735897225895,
+    "duration" : 7261
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d8160106de5df7cb",
-  "name" : "TC01: Successful registration of a new account with valid information.",
+  "uid" : "37865035f0cfead7",
+  "name" : "TC18: Successful task creation with a link.",
   "time" : {
-    "start" : 1735833894263,
-    "stop" : 1735833907540,
-    "duration" : 13277
+    "start" : 1735896990501,
+    "stop" : 1735897000539,
+    "duration" : 10038
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4b887d597ec4ad6",
+  "name" : "TC17: Successful task deletion.",
+  "time" : {
+    "start" : 1735896984707,
+    "stop" : 1735896986529,
+    "duration" : 1822
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "6fb6bb742d543251",
+  "uid" : "2c754fecffd9c500",
+  "name" : "TC13: Successful change of name, description, and priority for a task.",
+  "time" : {
+    "start" : 1735896922769,
+    "stop" : 1735896931393,
+    "duration" : 8624
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b846ea1082f1b4a",
+  "name" : "TC30: Successful task moving on Board.",
+  "time" : {
+    "start" : 1735897186386,
+    "stop" : 1735897194265,
+    "duration" : 7879
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c073ea10f4d8b440",
+  "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+  "time" : {
+    "start" : 1735896859756,
+    "stop" : 1735896862983,
+    "duration" : 3227
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "31cb79d6411d536c",
   "name" : "TC04: Ability to login using a Google account.",
   "time" : {
-    "start" : 1735833921068,
-    "stop" : 1735833921068,
+    "start" : 1735896813248,
+    "stop" : 1735896813248,
     "duration" : 0
   },
   "status" : "skipped",
   "severity" : "normal"
 }, {
-  "uid" : "dda1fbaacd74ccc5",
+  "uid" : "5f8018810a56b12c",
   "name" : "TC10: Inability to change the current password with an incorrect password.",
   "time" : {
-    "start" : 1735833993735,
-    "stop" : 1735834002462,
-    "duration" : 8727
+    "start" : 1735896876257,
+    "stop" : 1735896884037,
+    "duration" : 7780
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "24f1cc09d8b5c64c",
-  "name" : "TC08: Unsuccessful registration of a new account with invalid information.",
+  "uid" : "4ac640a09b506d4f",
+  "name" : "TC12: Successful task creation.",
   "time" : {
-    "start" : 1735833976873,
-    "stop" : 1735833979223,
-    "duration" : 2350
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "8dc7e2199f8c3b66",
-  "name" : "TC14: Successful addition of a sub-task.",
-  "time" : {
-    "start" : 1735834066916,
-    "stop" : 1735834091008,
-    "duration" : 24092
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "94641a9bb682b67f",
-  "name" : "TC09: Unsuccessful login to an existing account with invalid information.",
-  "time" : {
-    "start" : 1735833979643,
-    "stop" : 1735833983878,
-    "duration" : 4235
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "d1b3053d097cd285",
-  "name" : "TC05: Successful password change.",
-  "time" : {
-    "start" : 1735833929909,
-    "stop" : 1735833940807,
-    "duration" : 10898
+    "start" : 1735896904822,
+    "stop" : 1735896915208,
+    "duration" : 10386
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "e80017fa4ab5a260",
-  "name" : "TC36: Successful search for a task that contains links.",
-  "time" : {
-    "start" : 1735834461972,
-    "stop" : 1735834472751,
-    "duration" : 10779
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "68a895a5ef70a6f8",
-  "name" : "TC37: Successful search for a task with a specific comment.",
-  "time" : {
-    "start" : 1735834480391,
-    "stop" : 1735834489297,
-    "duration" : 8906
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "42c23525f1cb9846",
-  "name" : "TC17: Successful task deletion.",
-  "time" : {
-    "start" : 1735834125703,
-    "stop" : 1735834127431,
-    "duration" : 1728
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "9ed646b202f1b088",
-  "name" : "TC33: Successful filtering for a task by its priority.",
-  "time" : {
-    "start" : 1735834414674,
-    "stop" : 1735834422536,
-    "duration" : 7862
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "2ac0216e8836e326",
-  "name" : "TC24: Successful creation of a new Task Board with sections.",
-  "time" : {
-    "start" : 1735834249865,
-    "stop" : 1735834258205,
-    "duration" : 8340
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "a734dda13c41eb88",
-  "name" : "TC02: Successful login to an existing account with valid information.",
-  "time" : {
-    "start" : 1735833907868,
-    "stop" : 1735833913053,
-    "duration" : 5185
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "6459748f51be4d2d",
-  "name" : "TC34: Successful filtering for a task by its label.",
-  "time" : {
-    "start" : 1735834430272,
-    "stop" : 1735834438461,
-    "duration" : 8189
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "6d3382b8718ab9ba",
-  "name" : "TC19: Successful addition of a comment to a task.",
-  "time" : {
-    "start" : 1735834150941,
-    "stop" : 1735834158620,
-    "duration" : 7679
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "b1e4ed49456c8792",
-  "name" : "TC22: Unsuccessful task creation with invalid information.",
-  "time" : {
-    "start" : 1735834223146,
-    "stop" : 1735834225006,
-    "duration" : 1860
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "158d43d595b62efe",
-  "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
-  "time" : {
-    "start" : 1735834307285,
-    "stop" : 1735834313281,
-    "duration" : 5996
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "a652ccff83d4a52b",
-  "name" : "TC20: Successful addition of a label to a task.",
-  "time" : {
-    "start" : 1735834167284,
-    "stop" : 1735834174938,
-    "duration" : 7654
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ce5843f111ce1cc4",
-  "name" : "TC35: Successful filtering for a task by its due date.",
-  "time" : {
-    "start" : 1735834447744,
-    "stop" : 1735834457725,
-    "duration" : 9981
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "cb8ecf4dfbe3ab8",
-  "name" : "TC03: Successful logout from an account.",
-  "time" : {
-    "start" : 1735833918538,
-    "stop" : 1735833921065,
-    "duration" : 2527
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6ae91c018ba71019",
-  "name" : "TC32: Successful search for a task by its description.",
-  "time" : {
-    "start" : 1735834399725,
-    "stop" : 1735834406956,
-    "duration" : 7231
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "920c490b386a73f",
-  "name" : "TC25: Successful change of the Project name and type.",
-  "time" : {
-    "start" : 1735834270529,
-    "stop" : 1735834279829,
-    "duration" : 9300
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "693304998cbda2d0",
-  "name" : "TC26: Successful deletion of a Project.",
-  "time" : {
-    "start" : 1735834290493,
-    "stop" : 1735834299120,
-    "duration" : 8627
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "6d77f7afca7603d1",
-  "name" : "TC28: Successful duplication of a Task List.",
-  "time" : {
-    "start" : 1735834327846,
-    "stop" : 1735834335176,
-    "duration" : 7330
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "3335ba06527ca3e8",
+  "uid" : "394223a42b8c0861",
   "name" : "TC23: Successful creation of a new Task List.",
   "time" : {
-    "start" : 1735834233807,
-    "stop" : 1735834241445,
-    "duration" : 7638
+    "start" : 1735897065844,
+    "stop" : 1735897072448,
+    "duration" : 6604
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "5308805a2e287d1a",
-  "name" : "TC16: Successful task completion and marking as completed.",
+  "uid" : "4495d49fec9aef85",
+  "name" : "TC24: Successful creation of a new Task Board with sections.",
   "time" : {
-    "start" : 1735834116212,
-    "stop" : 1735834118411,
-    "duration" : 2199
+    "start" : 1735897080801,
+    "stop" : 1735897089176,
+    "duration" : 8375
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "ca36d4c2e9dbfc1d",
-  "name" : "TC13: Successful change of name, description, and priority for a task.",
-  "time" : {
-    "start" : 1735834048231,
-    "stop" : 1735834057051,
-    "duration" : 8820
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bf1a8266f1fd0a",
+  "uid" : "808a9f501e337047",
   "name" : "TC07: Successful account deletion.",
   "time" : {
-    "start" : 1735833972297,
-    "stop" : 1735833976492,
-    "duration" : 4195
+    "start" : 1735896855989,
+    "stop" : 1735896859384,
+    "duration" : 3395
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "65b8a0367e3128c7",
-  "name" : "TC29: Successful archiving of a Project.",
+  "uid" : "776ade16d35ceaea",
+  "name" : "TC14: Successful addition of a sub-task.",
   "time" : {
-    "start" : 1735834345747,
-    "stop" : 1735834357295,
-    "duration" : 11548
+    "start" : 1735896939410,
+    "stop" : 1735896949443,
+    "duration" : 10033
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "f5b864c366e15c43",
+  "uid" : "4f0e4dd049ac396e",
+  "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
+  "time" : {
+    "start" : 1735897133780,
+    "stop" : 1735897136572,
+    "duration" : 2792
+  },
+  "status" : "broken",
+  "severity" : "minor"
+}, {
+  "uid" : "31da2048652a994f",
+  "name" : "TC01: Successful registration of a new account with valid information.",
+  "time" : {
+    "start" : 1735896790347,
+    "stop" : 1735896802173,
+    "duration" : 11826
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2df8ffdcf74a62bf",
+  "name" : "TC25: Successful change of the Project name and type.",
+  "time" : {
+    "start" : 1735897099033,
+    "stop" : 1735897107910,
+    "duration" : 8877
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf67393b966ca2e8",
+  "name" : "TC09: Unsuccessful login to an existing account with invalid information.",
+  "time" : {
+    "start" : 1735896863406,
+    "stop" : 1735896867665,
+    "duration" : 4259
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "77d16f2201b97abf",
+  "name" : "TC16: Successful task completion and marking as completed.",
+  "time" : {
+    "start" : 1735896973325,
+    "stop" : 1735896976514,
+    "duration" : 3189
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "fb69cd3b0d85f127",
+  "name" : "TC19: Successful addition of a comment to a task.",
+  "time" : {
+    "start" : 1735897007804,
+    "stop" : 1735897015330,
+    "duration" : 7526
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "d3f8161d7d05c0dd",
+  "name" : "TC36: Successful search for a task that contains links.",
+  "time" : {
+    "start" : 1735897279362,
+    "stop" : 1735897289171,
+    "duration" : 9809
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "817de379ffffff12",
+  "name" : "TC33: Successful filtering for a task by its priority.",
+  "time" : {
+    "start" : 1735897233674,
+    "stop" : 1735897241515,
+    "duration" : 7841
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "ee4b6f8a92801b2a",
+  "name" : "TC20: Successful addition of a label to a task.",
+  "time" : {
+    "start" : 1735897023002,
+    "stop" : 1735897030485,
+    "duration" : 7483
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f391baf3c3d220d",
+  "name" : "TC34: Successful filtering for a task by its label.",
+  "time" : {
+    "start" : 1735897249119,
+    "stop" : 1735897257396,
+    "duration" : 8277
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "f32ad9fbcf8923d2",
+  "name" : "TC02: Successful login to an existing account with valid information.",
+  "time" : {
+    "start" : 1735896802499,
+    "stop" : 1735896806558,
+    "duration" : 4059
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "7c58637e3affba36",
+  "name" : "TC03: Successful logout from an account.",
+  "time" : {
+    "start" : 1735896810772,
+    "stop" : 1735896813247,
+    "duration" : 2475
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fc4203fdd6d38dd",
+  "name" : "TC31: Successful search for a task by its name.",
+  "time" : {
+    "start" : 1735897202380,
+    "stop" : 1735897210130,
+    "duration" : 7750
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7d774f1c6ebefa4",
+  "name" : "TC35: Successful filtering for a task by its due date.",
+  "time" : {
+    "start" : 1735897265195,
+    "stop" : 1735897275351,
+    "duration" : 10156
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "30909e74128e8905",
   "name" : "TC06: Successful email and username change.",
   "time" : {
-    "start" : 1735833950429,
-    "stop" : 1735833960902,
-    "duration" : 10473
+    "start" : 1735896838890,
+    "stop" : 1735896848046,
+    "duration" : 9156
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41771c89290e9aef",
+  "name" : "TC21: Successful task duplication.",
+  "time" : {
+    "start" : 1735897038553,
+    "stop" : 1735897050540,
+    "duration" : 11987
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "b9e46a8bd8770362",
+  "name" : "TC15: Successful change of task due date and time.",
+  "time" : {
+    "start" : 1735896957028,
+    "stop" : 1735896966145,
+    "duration" : 9117
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5c4c886ae312b86",
+  "name" : "TC29: Successful archiving of a Project.",
+  "time" : {
+    "start" : 1735897165257,
+    "stop" : 1735897176118,
+    "duration" : 10861
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb61f7826b3f8ebb",
+  "name" : "TC22: Unsuccessful task creation with invalid information.",
+  "time" : {
+    "start" : 1735897055315,
+    "stop" : 1735897057133,
+    "duration" : 1818
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "12e93f19a1d68370",
+  "name" : "TC05: Successful password change.",
+  "time" : {
+    "start" : 1735896821674,
+    "stop" : 1735896831180,
+    "duration" : 9506
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8a4d580ba55d00a2",
+  "name" : "TC26: Successful deletion of a Project.",
+  "time" : {
+    "start" : 1735897117614,
+    "stop" : 1735897125485,
+    "duration" : 7871
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "395b4d3ccce15f6d",
+  "name" : "TC37: Successful search for a task with a specific comment.",
+  "time" : {
+    "start" : 1735897296804,
+    "stop" : 1735897305553,
+    "duration" : 8749
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "5052ad2fadb837a7",
+  "name" : "TC11: Inability to delete the account with an incorrect email or password.",
+  "time" : {
+    "start" : 1735896891937,
+    "stop" : 1735896900019,
+    "duration" : 8082
   },
   "status" : "passed",
   "severity" : "normal"
