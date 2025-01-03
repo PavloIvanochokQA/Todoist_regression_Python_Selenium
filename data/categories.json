@@ -5,20 +5,67 @@
     "children" : [ {
       "name" : "selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: {Alert text : \nMessage: unexpected alert open: {Alert text : }\n  (Session info: headless chrome=112.0.5615.165)",
       "children" : [ {
-        "name" : "TC27: Unsuccessful creation of a new Project due to invalid information.",
-        "uid" : "4f0e4dd049ac396e",
+        "name" : "TC15: Successful change of task due date and time.",
+        "uid" : "27287a10f361d08a",
         "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
         "status" : "broken",
         "time" : {
-          "start" : 1735897133780,
-          "stop" : 1735897136572,
-          "duration" : 2792
+          "start" : 1735902361105,
+          "stop" : 1735902366797,
+          "duration" : 5692
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC23: Successful creation of a new Task List.",
+        "uid" : "b4dd2ee462ef8d06",
+        "parentUid" : "fa7d501b4d2fc1a74b143064aea3925d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735902480185,
+          "stop" : 1735902484627,
+          "duration" : 4442
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "fa7d501b4d2fc1a74b143064aea3925d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Father poor cold create take sit personal.\" not found in the \"Completed\" section.",
+      "children" : [ {
+        "name" : "TC16: Successful task completion and marking as completed.",
+        "uid" : "60fbb1770875e43d",
+        "parentUid" : "b599a875fb6dcfa027f8c91a41c2b68f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735902374341,
+          "stop" : 1735902390774,
+          "duration" : 16433
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b599a875fb6dcfa027f8c91a41c2b68f"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "TC30: Successful task moving on Board.",
+        "uid" : "6c20a8f3c443affa",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1735902602844,
+          "stop" : 1735902625730,
+          "duration" : 22886
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
