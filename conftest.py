@@ -24,6 +24,7 @@ def driver(request):
     driver = webdriver.Chrome(options=options)
     request.cls.driver = driver
     yield driver
+    driver.quit()
 
 
 @pytest.fixture(scope="function")

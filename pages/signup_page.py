@@ -14,9 +14,9 @@ class SignupPage(BasePage):
     SIGNUP_WITH_EMAIL_BUTTON = ("xpath", "//button[@type='submit']")
     CONTINUE_BUTTON = ("xpath", "//button[@type='submit']")
     LAUNCH_TODOIST_BUTTON = ("xpath", "//button[@aria-label='Launch Todoist']")
-    PERSONAL_CHECKBOX = ("xpath", "//button[@data-gtm-id='personal']")
-    WORK_CHECKBOX = ("xpath", "//button[@data-gtm-id='work']")
-    EDUCATION_CHECKBOX = ("xpath", "//button[@data-gtm-id='education']")
+    PERSONAL_CHECKBOX = ("xpath", "//button[@name='Personal']")
+    WORK_CHECKBOX = ("xpath", "//button[@name='Work']")
+    EDUCATION_CHECKBOX = ("xpath", "//button[@name='Education']")
     PAGE_HEADING = ("xpath", "//div[@class='fb8d74bb']//h1")
     ERROR_MESSAGE = ("xpath", "//form/div[@class='a83bd4e0 _266d6623 _8f5b5f2b fb8d74bb']")
 
