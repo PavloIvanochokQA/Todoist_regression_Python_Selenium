@@ -5,12 +5,11 @@ from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 from utils.screenshot import take_screenshot
 
-
+@allure.feature("Registration")
 class TestRegistration(BaseTest):
 
     @pytest.mark.order(1)
     @pytest.mark.regression
-    @allure.feature("Registration")
     @allure.description("""
     This test verifies that a new account can be successfully registered using valid email, password, and username information.
     """)
@@ -44,7 +43,6 @@ class TestRegistration(BaseTest):
 
     @pytest.mark.order(8)
     @pytest.mark.regression
-    @allure.feature("Registration")
     @allure.description("""
     This test verifies that a new user cannot register an account when providing invalid information, such as incorrect email format, missing password, or other invalid inputs.
     """)

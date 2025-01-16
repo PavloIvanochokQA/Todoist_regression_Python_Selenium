@@ -4,12 +4,11 @@ from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 from utils.screenshot import take_screenshot
 
-
+@allure.feature("Projects Management")
 class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(23)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a new Task List can be successfully created with a valid name.
     """)
@@ -39,7 +38,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(24)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a new Task Board can be successfully created with multiple sections.
     """)
@@ -84,7 +82,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(25)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that the project name and type can be successfully changed.
     """)
@@ -113,7 +110,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(26)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully delete an existing project.
     """)
@@ -139,7 +135,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(27)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that the system prevents the creation of a new project when invalid information is provided.
     """)
@@ -166,7 +161,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(28)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully duplicate an existing task list, creating an identical copy.
     """)
@@ -194,7 +188,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(29)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully archive a project, confirm its archival in the archived projects section, and restore it back to the active projects section.
     """)
@@ -226,7 +219,6 @@ class TestProjectsManagement(BaseTest):
 
     @pytest.mark.order(30)
     @pytest.mark.regression
-    @allure.feature("Projects Management")
     @allure.description("""
     This test verifies that a user can successfully move a task from one column to another on the Board, ensuring the task's position is updated correctly and persists after a page refresh.
     """)

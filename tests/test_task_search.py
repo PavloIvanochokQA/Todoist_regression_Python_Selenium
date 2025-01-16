@@ -5,12 +5,11 @@ from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 from utils.screenshot import take_screenshot
 
-
+@allure.feature("Task Search")
 class TestTaskSearch(BaseTest):
 
     @pytest.mark.order(31)
     @pytest.mark.regression
-    @allure.feature("Task Search")
     @allure.description("""
     This test verifies that a user can successfully search for a task by its exact name, ensuring that the correct task is displayed in the search results.
     """)
@@ -35,7 +34,6 @@ class TestTaskSearch(BaseTest):
 
     @pytest.mark.order(32)
     @pytest.mark.regression
-    @allure.feature("Task Search")
     @allure.description("""
     This test verifies that a user can successfully search for a task by its description, ensuring that the correct task is displayed in the search results.
     """)
@@ -61,7 +59,6 @@ class TestTaskSearch(BaseTest):
 
     @pytest.mark.order(36)
     @pytest.mark.regression
-    @allure.feature("Task Search")
     @allure.description("""
     This test verifies that a user can successfully search for a task containing links, ensuring that tasks with URLs are correctly identified and displayed in the search results.
     """)
@@ -92,7 +89,6 @@ class TestTaskSearch(BaseTest):
 
     @pytest.mark.order(37)
     @pytest.mark.regression
-    @allure.feature("Task Search")
     @allure.description("""
     This test verifies that a user can successfully search for a task with a specific comment, ensuring that tasks containing the specified comment are correctly identified and displayed in the search results.
     """)

@@ -4,12 +4,11 @@ from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 from utils.screenshot import take_screenshot
 
-
+@allure.feature("Authorization")
 class TestAuthorization(BaseTest):
 
     @pytest.mark.order(2)
     @pytest.mark.regression
-    @allure.feature("Authorization")
     @allure.description("""
     This test verifies that a user can successfully login to an existing account using valid email and password credentials.
     """)
@@ -31,7 +30,6 @@ class TestAuthorization(BaseTest):
 
     @pytest.mark.order(3)
     @pytest.mark.regression
-    @allure.feature("Authorization")
     @allure.description("""
     This test verifies that a user can successfully logout from an account and is redirected to the login page.
     """)
@@ -50,7 +48,6 @@ class TestAuthorization(BaseTest):
 
     @pytest.mark.order(4)
     @pytest.mark.regression
-    @allure.feature("Authorization")
     @allure.description("""
     This test verifies that a user can successfully login using a Google account, including the authorization process via Google's login page.
     """)
@@ -76,7 +73,6 @@ class TestAuthorization(BaseTest):
 
     @pytest.mark.order(9)
     @pytest.mark.regression
-    @allure.feature("Authorization")
     @allure.description("""
     This test verifies that a user cannot login to an existing account using invalid credentials, such as incorrect email or password.
     """)

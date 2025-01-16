@@ -5,12 +5,11 @@ from base.base_test import BaseTest
 from utils.fake_data_generator import FakeDataGenerator
 from utils.screenshot import take_screenshot
 
-
+@allure.feature("Profile Management")
 class TestProfileManagement(BaseTest):
 
     @pytest.mark.order(7)
     @pytest.mark.regression
-    @allure.feature("Profile Management")
     @allure.description("""
     This test verifies that a user can successfully delete their account by accessing the account settings and following the deletion process.
     """)
@@ -35,7 +34,6 @@ class TestProfileManagement(BaseTest):
 
     @pytest.mark.order(5)
     @pytest.mark.regression
-    @allure.feature("Profile Management")
     @allure.description("""
     This test verifies that a user can successfully change their password through the account settings by entering the current password and a new one.
     """)
@@ -69,7 +67,6 @@ class TestProfileManagement(BaseTest):
 
     @pytest.mark.order(6)
     @pytest.mark.regression
-    @allure.feature("Profile Management")
     @allure.description("""
     This test verifies that a user can successfully change their email address and username through the account settings.
     """)
@@ -108,7 +105,6 @@ class TestProfileManagement(BaseTest):
 
     @pytest.mark.order(10)
     @pytest.mark.regression
-    @allure.feature("Profile Management")
     @allure.description("""
     This test verifies that a user cannot change the current password when providing an incorrect current password.
     """)
@@ -146,7 +142,6 @@ class TestProfileManagement(BaseTest):
 
     @pytest.mark.order(11)
     @pytest.mark.regression
-    @allure.feature("Profile Management")
     @allure.description("""
     This test verifies that a user cannot delete their account when providing an incorrect email or password.
     """)
