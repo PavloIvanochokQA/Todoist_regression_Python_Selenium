@@ -32,7 +32,7 @@ class TaskPage(BasePage):
     COMMENT_FIELD = ("xpath", "//div[@aria-label='Comment']/p")
     ADD_COMMENT_BUTTON = ("xpath", "//button[@data-track='comments|add_comment']")
     COMMENTS_CONTAINER = ("xpath", "//div[@data-testid='comments-list-container']")
-    LABELS_BUTTON = ("xpath", "(//div[@data-testid='task-details-sidebar']//button)[5]")
+    LABELS_BUTTON = ("xpath", "(//div[@data-testid='task-details-sidebar']//button)[6]")
     LABEL_FIELD = ("xpath", "//input[@aria-label='Type a label']")
 
     def is_opened(self):

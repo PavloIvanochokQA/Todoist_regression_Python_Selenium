@@ -32,7 +32,7 @@ class ProjectsPage(HomePage):
     CONFIRM_ARCHIVAL_BUTTON = ("xpath", "//button[@data-autofocus='true']")
     ACTIVE_PROJECTS_BUTTON = ("xpath", "//button[text()='Active projects']")
     ARCHIVED_PROJECTS_BUTTON = ("xpath", "//a[@href='/app/projects/archived']")
-    PROJECT_ARCHIVED_MESSAGE = ("xpath", "//div[@class='fb8d74bb c4803194 b0e6eab4']/div")
+    PROJECT_ARCHIVED_MESSAGE = ("xpath", "//div[@role='status']/div/div/div/div")
     UNARCHIVE_BUTTON = ("xpath", "//button[@class='fb8d74bb _56a651f6 _3930afa0 _7ea1378e _7246d092']")
     MOVE_TO_BUTTON = ("xpath", "//div[@data-action-hint='task-overflow-menu-move-to-project']")
 
