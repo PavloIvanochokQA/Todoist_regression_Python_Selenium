@@ -1,0 +1,483 @@
+{
+  "uid" : "d10fd5900d6866d6",
+  "name" : "TC18: Successful task creation with a link.",
+  "fullName" : "tests.test_task_management.TestTaskManagement#test_task_creation_with_link",
+  "historyId" : "5af7c37fccddd114a99804c295eda89e",
+  "time" : {
+    "start" : 1737115815934,
+    "stop" : 1737115854505,
+    "duration" : 38571
+  },
+  "description" : "\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: 10",
+  "statusTrace" : "self = <test_task_management.TestTaskManagement object at 0x7f78f247acd0>\nlogin = None\ndelete_task = <function delete_task.<locals>.delete at 0x7f78f3c4f600>\n\n    @pytest.mark.order(18)\n    @pytest.mark.regression\n    @allure.description(\"\"\"\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC18: Successful task creation with a link.\")\n    def test_task_creation_with_link(self, login, delete_task):\n        links = [\"https://github.com/\", \"https://www.youtube.com/\", \"https://www.google.com/\"]\n        link = random.choice(links)\n        fake = FakeDataGenerator()\n        task_name = fake.task_name\n        try:\n            # Steps:\n            self.home_page.click_add_task_button()\n            self.home_page.enter_task_name(task_name + \" \" + link)\n            self.home_page.click_submit_add_task_button()\n            self.home_page.click_link_in_task(task_name)\n            self.home_page.is_link_opened(link)\n        except Exception as e:\n            take_screenshot(self.driver, \"Task Creation with Link Test Failed\")\n>           raise e\n\ntests/test_task_management.py:205: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/test_task_management.py:201: in test_task_creation_with_link\n    self.home_page.click_link_in_task(task_name)\npages/home_page.py:148: in click_link_in_task\n    self.click_element(link_locator)\nbase/base_page.py:21: in click_element\n    self.wait.until(EC.element_to_be_clickable(locator)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"db0889e54e793f6d1098b69ddd4d0c5d\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f78f3c4f6a0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_task_management.TestTaskManagement object at 0x7f78f247acd0>\nlogin = None\ndelete_task = <function delete_task.<locals>.delete at 0x7f78f3c4f600>\n\n    @pytest.mark.order(18)\n    @pytest.mark.regression\n    @allure.description(\"\"\"\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC18: Successful task creation with a link.\")\n    def test_task_creation_with_link(self, login, delete_task):\n        links = [\"https://github.com/\", \"https://www.youtube.com/\", \"https://www.google.com/\"]\n        link = random.choice(links)\n        fake = FakeDataGenerator()\n        task_name = fake.task_name\n        try:\n            # Steps:\n            self.home_page.click_add_task_button()\n            self.home_page.enter_task_name(task_name + \" \" + link)\n            self.home_page.click_submit_add_task_button()\n            self.home_page.click_link_in_task(task_name)\n            self.home_page.is_link_opened(link)\n        except Exception as e:\n            take_screenshot(self.driver, \"Task Creation with Link Test Failed\")\n            raise e\n        finally:\n            # Postconditions:\n            with allure.step(\"Postconditions: Delete the created task.\"):\n>               delete_task(task_name)\n\ntests/test_task_management.py:209: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nconftest.py:124: in delete\n    raise e\nconftest.py:118: in delete\n    home_page.click_more_actions_button(task_name)\npages/home_page.py:125: in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\nbase/base_page.py:29: in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"db0889e54e793f6d1098b69ddd4d0c5d\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f78f4741440>\nmessage = 10\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: 10\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1737115812643,
+      "stop" : 1737115815933,
+      "duration" : 3290
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1737115812643,
+        "stop" : 1737115813287,
+        "duration" : 644
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1737115813287,
+        "stop" : 1737115813417,
+        "duration" : 130
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1737115813417,
+        "stop" : 1737115813513,
+        "duration" : 96
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1737115813513,
+        "stop" : 1737115813560,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1737115813560,
+        "stop" : 1737115815933,
+        "duration" : 2373
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 5
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1737115812642,
+      "stop" : 1737115812643,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1737115812281,
+      "stop" : 1737115812642,
+      "duration" : 361
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1737115590971,
+      "stop" : 1737115591036,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "delete_task",
+    "time" : {
+      "start" : 1737115815933,
+      "stop" : 1737115815934,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    ",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: 10",
+    "statusTrace" : "self = <test_task_management.TestTaskManagement object at 0x7f78f247acd0>\nlogin = None\ndelete_task = <function delete_task.<locals>.delete at 0x7f78f3c4f600>\n\n    @pytest.mark.order(18)\n    @pytest.mark.regression\n    @allure.description(\"\"\"\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC18: Successful task creation with a link.\")\n    def test_task_creation_with_link(self, login, delete_task):\n        links = [\"https://github.com/\", \"https://www.youtube.com/\", \"https://www.google.com/\"]\n        link = random.choice(links)\n        fake = FakeDataGenerator()\n        task_name = fake.task_name\n        try:\n            # Steps:\n            self.home_page.click_add_task_button()\n            self.home_page.enter_task_name(task_name + \" \" + link)\n            self.home_page.click_submit_add_task_button()\n            self.home_page.click_link_in_task(task_name)\n            self.home_page.is_link_opened(link)\n        except Exception as e:\n            take_screenshot(self.driver, \"Task Creation with Link Test Failed\")\n>           raise e\n\ntests/test_task_management.py:205: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/test_task_management.py:201: in test_task_creation_with_link\n    self.home_page.click_link_in_task(task_name)\npages/home_page.py:148: in click_link_in_task\n    self.click_element(link_locator)\nbase/base_page.py:21: in click_element\n    self.wait.until(EC.element_to_be_clickable(locator)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"db0889e54e793f6d1098b69ddd4d0c5d\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f78f3c4f6a0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_task_management.TestTaskManagement object at 0x7f78f247acd0>\nlogin = None\ndelete_task = <function delete_task.<locals>.delete at 0x7f78f3c4f600>\n\n    @pytest.mark.order(18)\n    @pytest.mark.regression\n    @allure.description(\"\"\"\n    This test verifies that a task can be successfully created with a link, and clicking the link opens a new browser tab with the correct URL.\n    \"\"\")\n    @allure.severity(allure.severity_level.NORMAL)\n    @allure.title(\"TC18: Successful task creation with a link.\")\n    def test_task_creation_with_link(self, login, delete_task):\n        links = [\"https://github.com/\", \"https://www.youtube.com/\", \"https://www.google.com/\"]\n        link = random.choice(links)\n        fake = FakeDataGenerator()\n        task_name = fake.task_name\n        try:\n            # Steps:\n            self.home_page.click_add_task_button()\n            self.home_page.enter_task_name(task_name + \" \" + link)\n            self.home_page.click_submit_add_task_button()\n            self.home_page.click_link_in_task(task_name)\n            self.home_page.is_link_opened(link)\n        except Exception as e:\n            take_screenshot(self.driver, \"Task Creation with Link Test Failed\")\n            raise e\n        finally:\n            # Postconditions:\n            with allure.step(\"Postconditions: Delete the created task.\"):\n>               delete_task(task_name)\n\ntests/test_task_management.py:209: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nconftest.py:124: in delete\n    raise e\nconftest.py:118: in delete\n    home_page.click_more_actions_button(task_name)\npages/home_page.py:125: in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\nbase/base_page.py:29: in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"db0889e54e793f6d1098b69ddd4d0c5d\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f78f4741440>\nmessage = 10\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: 10\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1737115815937,
+        "stop" : 1737115816866,
+        "duration" : 929
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1737115816866,
+        "stop" : 1737115817972,
+        "duration" : 1106
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'No economic respond between today paper born why. https://www.youtube.com/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1737115817972,
+        "stop" : 1737115819185,
+        "duration" : 1213
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the link in the task.",
+      "time" : {
+        "start" : 1737115819185,
+        "stop" : 1737115834285,
+        "duration" : 15100
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/home_page.py\", line 148, in click_link_in_task\n    self.click_element(link_locator)\n  File \"/usr/workspace/base/base_page.py\", line 21, in click_element\n    self.wait.until(EC.element_to_be_clickable(locator)).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'No economic respond between today paper born why.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Postconditions: Delete the created task.",
+      "time" : {
+        "start" : 1737115834419,
+        "stop" : 1737115854504,
+        "duration" : 20085
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: 10\n\n",
+      "statusTrace" : "  File \"/usr/workspace/tests/test_task_management.py\", line 209, in test_task_creation_with_link\n    delete_task(task_name)\n  File \"/usr/workspace/conftest.py\", line 124, in delete\n    raise e\n  File \"/usr/workspace/conftest.py\", line 118, in delete\n    home_page.click_more_actions_button(task_name)\n  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/home_page.py\", line 125, in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/workspace/base/base_page.py\", line 29, in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1737115836419,
+          "stop" : 1737115837269,
+          "duration" : 850
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1737115839269,
+          "stop" : 1737115854369,
+          "duration" : 15100
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: 10\n\n",
+        "statusTrace" : "  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/home_page.py\", line 125, in click_more_actions_button\n    task_element = self.wait_for_visibility(task_locator)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/workspace/base/base_page.py\", line 29, in wait_for_visibility\n    return self.wait.until(EC.visibility_of_element_located(locator), timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'No economic respond between today paper born why.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ {
+        "uid" : "5d695db5a5cb7c68",
+        "name" : "Task Deletion Failed",
+        "source" : "5d695db5a5cb7c68.png",
+        "type" : "image/png",
+        "size" : 49546
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 2
+    } ],
+    "attachments" : [ {
+      "uid" : "64e1a49e1c92744b",
+      "name" : "Task Creation with Link Test Failed",
+      "source" : "64e1a49e1c92744b.png",
+      "type" : "image/png",
+      "size" : 49326
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 7
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1737115854555,
+      "stop" : 1737115854635,
+      "duration" : 80
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Task Management"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(18)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_task_management"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTaskManagement"
+  }, {
+    "name" : "host",
+    "value" : "a245b96359c7"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_task_management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 10,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "6c542cb1bd7c6c4e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736072524644,
+          "stop" : 1736072538084,
+          "duration" : 13440
+        }
+      }, {
+        "uid" : "21cd307be0529b37",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735925584683,
+          "stop" : 1735925597952,
+          "duration" : 13269
+        }
+      }, {
+        "uid" : "225118c8bb703ad1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912553210,
+          "stop" : 1735912564175,
+          "duration" : 10965
+        }
+      }, {
+        "uid" : "f66f46269533a598",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902404895,
+          "stop" : 1735902414171,
+          "duration" : 9276
+        }
+      }, {
+        "uid" : "37865035f0cfead7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735896990501,
+          "stop" : 1735897000539,
+          "duration" : 10038
+        }
+      }, {
+        "uid" : "657fb1fb6ee39e35",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834131579,
+          "stop" : 1735834142040,
+          "duration" : 10461
+        }
+      }, {
+        "uid" : "ac8cb0beed852a15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832257519,
+          "stop" : 1735832267484,
+          "duration" : 9965
+        }
+      }, {
+        "uid" : "aa1e3df967e4c18b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828096203,
+          "stop" : 1735828106856,
+          "duration" : 10653
+        }
+      }, {
+        "uid" : "1022368d54a25d7e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735821962367,
+          "stop" : 1735821972408,
+          "duration" : 10041
+        }
+      }, {
+        "uid" : "96c24e7c80e991",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333688467,
+          "stop" : 1735333699417,
+          "duration" : 10950
+        }
+      } ]
+    },
+    "tags" : [ "regression", "order(18)" ]
+  },
+  "source" : "d10fd5900d6866d6.json",
+  "parameterValues" : [ ]
+}

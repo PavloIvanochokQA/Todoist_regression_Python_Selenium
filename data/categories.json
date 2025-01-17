@@ -3,22 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: Task \"Similar while then little focus real.\" not found in the \"Completed\" section.",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: 10",
       "children" : [ {
-        "name" : "TC16: Successful task completion and marking as completed.",
-        "uid" : "15a35759ba47bbf2",
-        "parentUid" : "bc30e84f7f0ce52e47706034fa9f410d",
+        "name" : "TC18: Successful task creation with a link.",
+        "uid" : "d10fd5900d6866d6",
+        "parentUid" : "7ef75dbfd36e5e785e4a208c05157f0e",
         "status" : "broken",
         "time" : {
-          "start" : 1736072492626,
-          "stop" : 1736072509112,
-          "duration" : 16486
+          "start" : 1737115815934,
+          "stop" : 1737115854505,
+          "duration" : 38571
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "bc30e84f7f0ce52e47706034fa9f410d"
+      "uid" : "7ef75dbfd36e5e785e4a208c05157f0e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

@@ -1,0 +1,388 @@
+{
+  "uid" : "e781a4eb84bb2dcc",
+  "name" : "TC03: Successful logout from an account.",
+  "fullName" : "tests.test_authorization.TestAuthorization#test_logout",
+  "historyId" : "681583b3e11cb1a6686635d30914a577",
+  "time" : {
+    "start" : 1737115617498,
+    "stop" : 1737115619529,
+    "duration" : 2031
+  },
+  "description" : "\n    This test verifies that a user can successfully logout from an account and is redirected to the login page.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully logout from an account and is redirected to the login page.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1737115613657,
+      "stop" : 1737115613998,
+      "duration" : 341
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "login",
+    "time" : {
+      "start" : 1737115613999,
+      "stop" : 1737115617497,
+      "duration" : 3498
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1737115613999,
+        "stop" : 1737115614650,
+        "duration" : 651
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1737115614650,
+        "stop" : 1737115614782,
+        "duration" : 132
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1737115614782,
+        "stop" : 1737115614876,
+        "duration" : 94
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1737115614876,
+        "stop" : 1737115614925,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1737115614925,
+        "stop" : 1737115617497,
+        "duration" : 2572
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 5
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1737115590971,
+      "stop" : 1737115591036,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1737115613998,
+      "stop" : 1737115613999,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully logout from an account and is redirected to the login page.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Username\" button.",
+      "time" : {
+        "start" : 1737115617498,
+        "stop" : 1737115617957,
+        "duration" : 459
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the \"Log out\" button.",
+      "time" : {
+        "start" : 1737115617957,
+        "stop" : 1737115618037,
+        "duration" : 80
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/auth/login is opened.",
+      "time" : {
+        "start" : 1737115618037,
+        "stop" : 1737115619373,
+        "duration" : 1336
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page heading is \"Log in\".",
+      "time" : {
+        "start" : 1737115619373,
+        "stop" : 1737115619529,
+        "duration" : 156
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 4
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1737115619530,
+      "stop" : 1737115619603,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Authorization"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(3)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_authorization"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAuthorization"
+  }, {
+    "name" : "host",
+    "value" : "a245b96359c7"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_authorization"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 11,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "636afdfba2d22358",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736072298968,
+          "stop" : 1736072302444,
+          "duration" : 3476
+        }
+      }, {
+        "uid" : "566bad53c005b609",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735925375317,
+          "stop" : 1735925378670,
+          "duration" : 3353
+        }
+      }, {
+        "uid" : "99815adb4c1a2b6a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912339256,
+          "stop" : 1735912342631,
+          "duration" : 3375
+        }
+      }, {
+        "uid" : "4c799d131549d3fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902214518,
+          "stop" : 1735902217710,
+          "duration" : 3192
+        }
+      }, {
+        "uid" : "7c58637e3affba36",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735896810772,
+          "stop" : 1735896813247,
+          "duration" : 2475
+        }
+      }, {
+        "uid" : "cb8ecf4dfbe3ab8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735833918538,
+          "stop" : 1735833921065,
+          "duration" : 2527
+        }
+      }, {
+        "uid" : "e8d4fa374b860ad4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832060405,
+          "stop" : 1735832062803,
+          "duration" : 2398
+        }
+      }, {
+        "uid" : "960ba6d95f6e99bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735827880105,
+          "stop" : 1735827883419,
+          "duration" : 3314
+        }
+      }, {
+        "uid" : "5414be7a5a56d79f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735821751371,
+          "stop" : 1735821754994,
+          "duration" : 3623
+        }
+      }, {
+        "uid" : "bb8dbd29f940dc53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735333401736,
+          "stop" : 1735333407116,
+          "duration" : 5380
+        }
+      } ]
+    },
+    "tags" : [ "order(3)", "regression" ]
+  },
+  "source" : "e781a4eb84bb2dcc.json",
+  "parameterValues" : [ ]
+}

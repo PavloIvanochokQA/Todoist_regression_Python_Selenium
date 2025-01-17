@@ -1,0 +1,604 @@
+{
+  "uid" : "14a9ab63f927cf00",
+  "name" : "TC31: Successful search for a task by its name.",
+  "fullName" : "tests.test_task_search.TestTaskSearch#test_task_search_by_name",
+  "historyId" : "b38ac5e557a6cf568043732c636c3f3a",
+  "time" : {
+    "start" : 1737116102086,
+    "stop" : 1737116111730,
+    "duration" : 9644
+  },
+  "description" : "\n    This test verifies that a user can successfully search for a task by its exact name, ensuring that the correct task is displayed in the search results.\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that a user can successfully search for a task by its exact name, ensuring that the correct task is displayed in the search results.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1737116095361,
+      "stop" : 1737116098502,
+      "duration" : 3141
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open the page https://app.todoist.com/auth/login.",
+      "time" : {
+        "start" : 1737116095362,
+        "stop" : 1737116096034,
+        "duration" : 672
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter email into the \"Email\" field.",
+      "time" : {
+        "start" : 1737116096034,
+        "stop" : 1737116096173,
+        "duration" : 139
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'seb.bell@ymail.com'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter password into the \"Password\" field.",
+      "time" : {
+        "start" : 1737116096173,
+        "stop" : 1737116096274,
+        "duration" : 101
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'h28cnTtBfH3m'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the \"Log in\" button.",
+      "time" : {
+        "start" : 1737116096274,
+        "stop" : 1737116096323,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page with the URL https://app.todoist.com/app/today is opened.",
+      "time" : {
+        "start" : 1737116096323,
+        "stop" : 1737116098502,
+        "duration" : 2179
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 5
+  }, {
+    "name" : "delete_task",
+    "time" : {
+      "start" : 1737116102085,
+      "stop" : 1737116102085,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1737115590971,
+      "stop" : 1737115591036,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1737116095361,
+      "stop" : 1737116095361,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1737116095017,
+      "stop" : 1737116095361,
+      "duration" : 344
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "create_task",
+    "time" : {
+      "start" : 1737116098502,
+      "stop" : 1737116102085,
+      "duration" : 3583
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Add task\" button.",
+      "time" : {
+        "start" : 1737116098504,
+        "stop" : 1737116099392,
+        "duration" : 888
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter task name into the \"Task name\" field.",
+      "time" : {
+        "start" : 1737116099392,
+        "stop" : 1737116100236,
+        "duration" : 844
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_name",
+        "value" : "'Live everything team stuff political side.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter description into the \"Description\" field.",
+      "time" : {
+        "start" : 1737116100237,
+        "stop" : 1737116100767,
+        "duration" : 530
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_description",
+        "value" : "'Serve whose to someone forget. Poor mean Mr operation. Half race mother discussion kid camera drop.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Set the task's Priority.",
+      "time" : {
+        "start" : 1737116100767,
+        "stop" : 1737116100953,
+        "duration" : 186
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "task_priority",
+        "value" : "4"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the submit \"Add task\" button.",
+      "time" : {
+        "start" : 1737116100953,
+        "stop" : 1737116102085,
+        "duration" : 1132
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 5
+  } ],
+  "testStage" : {
+    "description" : "\n    This test verifies that a user can successfully search for a task by its exact name, ensuring that the correct task is displayed in the search results.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on the \"Search\" button.",
+      "time" : {
+        "start" : 1737116102086,
+        "stop" : 1737116102299,
+        "duration" : 213
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Enter search request into the search input field.",
+      "time" : {
+        "start" : 1737116102299,
+        "stop" : 1737116102735,
+        "duration" : 436
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "request",
+        "value" : "'Live everything team stuff political side.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the task appears in the search results section.",
+      "time" : {
+        "start" : 1737116102735,
+        "stop" : 1737116102752,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "request",
+        "value" : "'Live everything team stuff political side.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Click on the search result in the search results section.",
+      "time" : {
+        "start" : 1737116102752,
+        "stop" : 1737116102968,
+        "duration" : 216
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "request",
+        "value" : "'Live everything team stuff political side.'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Verify that the page with a URL starting with https://app.todoist.com/app/task is opened.",
+      "time" : {
+        "start" : 1737116102968,
+        "stop" : 1737116103059,
+        "duration" : 91
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Postconditions: Delete the created task.",
+      "time" : {
+        "start" : 1737116103059,
+        "stop" : 1737116111730,
+        "duration" : 8671
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open the page https://app.todoist.com/app/today.",
+        "time" : {
+          "start" : 1737116105059,
+          "stop" : 1737116106042,
+          "duration" : 983
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Click on the \"More actions\" button on the task.",
+        "time" : {
+          "start" : 1737116108042,
+          "stop" : 1737116108534,
+          "duration" : 492
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "task_name",
+          "value" : "'Live everything team stuff political side.'"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "Click on the \"Delete\" button.",
+        "time" : {
+          "start" : 1737116110534,
+          "stop" : 1737116110647,
+          "duration" : 113
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Confirm the deletion.",
+        "time" : {
+          "start" : 1737116110647,
+          "stop" : 1737116111730,
+          "duration" : 1083
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 4
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 10
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1737116111732,
+      "stop" : 1737116111809,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Task Search"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "order(31)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_task_search"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTaskSearch"
+  }, {
+    "name" : "host",
+    "value" : "a245b96359c7"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_task_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 11,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "d649b875a3ffc468",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736072788469,
+          "stop" : 1736072798481,
+          "duration" : 10012
+        }
+      }, {
+        "uid" : "964edaa45ecb8441",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735925835366,
+          "stop" : 1735925846173,
+          "duration" : 10807
+        }
+      }, {
+        "uid" : "745117f4b2b403c9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735912778440,
+          "stop" : 1735912786478,
+          "duration" : 8038
+        }
+      }, {
+        "uid" : "cfbfdad067f42046",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735902633562,
+          "stop" : 1735902639942,
+          "duration" : 6380
+        }
+      }, {
+        "uid" : "8fc4203fdd6d38dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735897202380,
+          "stop" : 1735897210130,
+          "duration" : 7750
+        }
+      }, {
+        "uid" : "503fefba6cc03bfc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735834385414,
+          "stop" : 1735834391838,
+          "duration" : 6424
+        }
+      }, {
+        "uid" : "702cb81a8a1be9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735832473637,
+          "stop" : 1735832480478,
+          "duration" : 6841
+        }
+      }, {
+        "uid" : "45b98025f2afc85b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735828358747,
+          "stop" : 1735828365600,
+          "duration" : 6853
+        }
+      }, {
+        "uid" : "cee2cbc5e6f11852",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735822209615,
+          "stop" : 1735822216505,
+          "duration" : 6890
+        }
+      }, {
+        "uid" : "515942356d24261a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735334004779,
+          "stop" : 1735334010487,
+          "duration" : 5708
+        }
+      } ]
+    },
+    "tags" : [ "order(31)", "regression" ]
+  },
+  "source" : "14a9ab63f927cf00.json",
+  "parameterValues" : [ ]
+}
