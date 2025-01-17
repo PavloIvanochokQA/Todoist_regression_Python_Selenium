@@ -1,6 +1,5 @@
 import pytest
 import random
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from pages.home_page import HomePage
@@ -74,9 +73,7 @@ def delete_account(driver):
 
     def delete(email, password):
         try:
-            time.sleep(2)
             delete_management_page.open()
-            time.sleep(2)
             delete_management_page.enter_email(email)
             delete_management_page.enter_password(password)
             delete_management_page.click_delete_account_button()
@@ -112,11 +109,8 @@ def delete_task(driver):
 
     def delete(task_name):
         try:
-            time.sleep(2)
             home_page.open()
-            time.sleep(2)
             home_page.click_more_actions_button(task_name)
-            time.sleep(2)
             home_page.click_delete_button()
             home_page.confirm_deletion()
         except Exception as e:
