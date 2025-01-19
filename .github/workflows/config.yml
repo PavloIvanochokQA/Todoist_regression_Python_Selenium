@@ -24,7 +24,7 @@ jobs:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
         run: |
-        
+          docker compose build
           docker compose up --exit-code-from regression || true
 
       - name: Copy history from gh-pages to allure-results
